@@ -4,14 +4,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "SpringchatCore",
+    name: "SpringchatCoreSDK",
     platforms: [
         .iOS(.v14)
     ],
     products: [
         .library(
-            name: "SpringchatCore",
-            targets: ["SpringchatCore"]
+            name: "SpringchatCoreSDK",
+            targets: ["SpringchatCoreSDK"]
         ),
     ],
     dependencies: [
@@ -22,8 +22,8 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "SpringchatCore",
+            name: "SpringchatCoreSDK",
             path: "./SpringchatCore.xcframework"
-        )
+        ),
     ]
 )
