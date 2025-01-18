@@ -1,6 +1,4 @@
 // swift-tools-version: 5.10
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
 import PackageDescription
 
 let package = Package(
@@ -11,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "SpringchatCoreSDK",
-            targets: ["SpringchatCoreSDK"]
+            targets: ["SpringchatCoreWrapper"]
         ),
     ],
     dependencies: [
@@ -22,8 +20,20 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "SpringchatCoreSDK",
+            name: "SpringchatCore",
             path: "./SpringchatCore.xcframework"
         ),
+        .target(
+            name: "SpringchatCoreWrapper",
+            dependencies: [
+                "SpringchatCore",
+                .product(name: "RealmSwift", package: "realm-swift"),
+            ],
+            path: "./SpringchatCoreWrapper", // Custom path for your wrapper's source files
+            linkerSettings: [
+                .linkedFramework("Realm"),
+                .linkedFramework("RealmSwift"),
+            ]
+        )
     ]
 )
