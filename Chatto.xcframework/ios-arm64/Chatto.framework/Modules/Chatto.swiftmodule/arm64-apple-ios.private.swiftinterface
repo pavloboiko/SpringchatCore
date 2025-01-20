@@ -1,0 +1,418 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios16.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name Chatto
+@_exported import Chatto
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum ChatItemVisibility {
+  case hidden
+  case appearing
+  case visible
+  public static func == (a: Chatto.ChatItemVisibility, b: Chatto.ChatItemVisibility) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+open class BaseChatItemPresenter<CellT> : Chatto.ChatItemPresenterProtocol where CellT : UIKit.UICollectionViewCell {
+  final weak public var cell: CellT?
+  public init()
+  open class func registerCells(_ collectionView: UIKit.UICollectionView)
+  open var canCalculateHeightInBackground: Swift.Bool {
+    get
+  }
+  open func heightForCell(maximumWidth width: CoreFoundation.CGFloat, decorationAttributes: (any Chatto.ChatItemDecorationAttributesProtocol)?) -> CoreFoundation.CGFloat
+  open func dequeueCell(collectionView: UIKit.UICollectionView, indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  open func configureCell(_ cell: UIKit.UICollectionViewCell, decorationAttributes: (any Chatto.ChatItemDecorationAttributesProtocol)?)
+  final public var itemVisibility: Chatto.ChatItemVisibility {
+    get
+  }
+  final public func cellWillBeShown(_ cell: UIKit.UICollectionViewCell)
+  open func cellWillBeShown()
+  open func shouldShowMenu() -> Swift.Bool
+  final public func cellWasHidden(_ cell: UIKit.UICollectionViewCell)
+  open func cellWasHidden()
+  open func canPerformMenuControllerAction(_ action: ObjectiveC.Selector) -> Swift.Bool
+  open func performMenuControllerAction(_ action: ObjectiveC.Selector)
+  @objc deinit
+}
+public protocol ChatItemsDecoratorProtocol {
+  func decorateItems(_ chatItems: [any Chatto.ChatItemProtocol]) -> [Chatto.DecoratedChatItem]
+}
+public struct DecoratedChatItem : Chatto.UniqueIdentificable {
+  public let uid: Swift.String
+  public let chatItem: any Chatto.ChatItemProtocol
+  public let decorationAttributes: (any Chatto.ChatItemDecorationAttributesProtocol)?
+  public init(chatItem: any Chatto.ChatItemProtocol, decorationAttributes: (any Chatto.ChatItemDecorationAttributesProtocol)?)
+  public init(uid: Swift.String, chatItem: any Chatto.ChatItemProtocol, decorationAttributes: (any Chatto.ChatItemDecorationAttributesProtocol)?)
+}
+public struct ChatItemCompanion : Chatto.UniqueIdentificable {
+  public let uid: Swift.String
+  public let chatItem: any Chatto.ChatItemProtocol
+  public let presenter: any Chatto.ChatItemPresenterProtocol
+  public var decorationAttributes: (any Chatto.ChatItemDecorationAttributesProtocol)?
+}
+public protocol ChatItemPresenterFactoryProtocol {
+  func createChatItemPresenter(_ chatItem: any Chatto.ChatItemProtocol) -> any Chatto.ChatItemPresenterProtocol
+  func configure(withCollectionView collectionView: UIKit.UICollectionView)
+}
+public enum CellVerticalEdge {
+  case top
+  case bottom
+  public static func == (a: Chatto.CellVerticalEdge, b: Chatto.CellVerticalEdge) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Chatto.BaseChatViewController {
+  @_Concurrency.MainActor(unsafe) public func isScrolledAtBottom() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func isScrolledAtTop() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func isCloseToBottom() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func isCloseToTop() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func isIndexPathVisible(_ indexPath: Foundation.IndexPath, atEdge edge: Chatto.CellVerticalEdge) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func visibleRect() -> CoreFoundation.CGRect
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func scrollToBottom(animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func scrollToPreservePosition(oldRefRect: CoreFoundation.CGRect?, newRefRect: CoreFoundation.CGRect?)
+  @_Concurrency.MainActor(unsafe) public func scrollToItem(withId itemId: Swift.String, position: UIKit.UICollectionView.ScrollPosition = .centeredVertically, animated: Swift.Bool = false)
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func scrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, willDecelerate decelerate: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func scrollViewDidScrollToTop(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor(unsafe) public func autoLoadMoreContentIfNeeded()
+}
+public typealias TaskClosure = (_ completion: @escaping () -> Swift.Void) -> Swift.Void
+public protocol SerialTaskQueueProtocol {
+  func addTask(_ task: @escaping Chatto.TaskClosure)
+  func start()
+  func stop()
+  func flushQueue()
+  var isEmpty: Swift.Bool { get }
+  var isStopped: Swift.Bool { get }
+}
+final public class SerialTaskQueue : Chatto.SerialTaskQueueProtocol {
+  final public var isBusy: Swift.Bool {
+    get
+  }
+  final public var isStopped: Swift.Bool {
+    get
+  }
+  public init()
+  final public func addTask(_ task: @escaping Chatto.TaskClosure)
+  final public func start()
+  final public func stop()
+  final public func flushQueue()
+  final public var isEmpty: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+public protocol BaseChatViewControllerViewProtocol : AnyObject {
+  var bmaInputAccessoryView: UIKit.UIView? { get set }
+}
+public protocol ChatCollectionViewLayoutDelegate : AnyObject {
+  func chatCollectionViewLayoutModel() -> Chatto.ChatCollectionViewLayoutModel
+}
+public struct ChatCollectionViewLayoutModel {
+  public static func createModel(_ collectionViewWidth: CoreFoundation.CGFloat, itemsLayoutData: [(height: CoreFoundation.CGFloat, bottomMargin: CoreFoundation.CGFloat)]) -> Chatto.ChatCollectionViewLayoutModel
+  public static func createEmptyModel() -> Chatto.ChatCollectionViewLayoutModel
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ChatCollectionViewLayout : UIKit.UICollectionViewLayout {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any Chatto.ChatCollectionViewLayoutDelegate)?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func invalidateLayout()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepare()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var collectionViewContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutAttributesForElements(in rect: CoreFoundation.CGRect) -> [UIKit.UICollectionViewLayoutAttributes]?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutAttributesForItem(at indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewLayoutAttributes?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func shouldInvalidateLayout(forBoundsChange newBounds: CoreFoundation.CGRect) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol ChatLayoutConfigurationProtocol {
+  var contentInsets: UIKit.UIEdgeInsets { get }
+  var scrollIndicatorInsets: UIKit.UIEdgeInsets { get }
+}
+public struct ChatLayoutConfiguration : Chatto.ChatLayoutConfigurationProtocol {
+  public let contentInsets: UIKit.UIEdgeInsets
+  public let scrollIndicatorInsets: UIKit.UIEdgeInsets
+  public init(contentInsets: UIKit.UIEdgeInsets, scrollIndicatorInsets: UIKit.UIEdgeInsets)
+}
+extension Chatto.BaseChatViewController {
+  @_Concurrency.MainActor(unsafe) public func enqueueModelUpdate(updateType: Chatto.UpdateType, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func enqueueMessageCountReductionIfNeeded()
+  @_Concurrency.MainActor(unsafe) public var focusPosition: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func chatCollectionViewLayoutModel() -> Chatto.ChatCollectionViewLayoutModel
+}
+public protocol KeyboardEventsHandling : AnyObject {
+  func onKeyboardStateDidChange(_ height: CoreFoundation.CGFloat, _ status: Chatto.KeyboardStatus)
+}
+public protocol ScrollViewEventsHandling : AnyObject {
+  func onScrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  func onScrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, _ decelerate: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class BaseChatViewController : UIKit.UIViewController, UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegate, Chatto.ChatDataSourceDelegateProtocol, Chatto.InputPositionControlling {
+  @_Concurrency.MainActor(unsafe) weak open var keyboardEventsHandler: (any Chatto.KeyboardEventsHandling)?
+  @_Concurrency.MainActor(unsafe) weak open var scrollViewEventsHandler: (any Chatto.ScrollViewEventsHandling)?
+  public typealias ChatItemCompanionCollection = Chatto.ReadOnlyOrderedDictionary<Chatto.ChatItemCompanion>
+  @_Concurrency.MainActor(unsafe) open var layoutConfiguration: any Chatto.ChatLayoutConfigurationProtocol {
+    get
+    set
+  }
+  public struct Constants {
+    public var updatesAnimationDuration: Swift.Double
+    public var preferredMaxMessageCount: Swift.Int?
+    public var preferredMaxMessageCountAdjustment: Swift.Int
+    public var autoloadingFractionalThreshold: CoreFoundation.CGFloat
+  }
+  @_Concurrency.MainActor(unsafe) public var constants: Chatto.BaseChatViewController.Constants
+  public struct UpdatesConfig {
+    public var fastUpdates: Swift.Bool
+    public var coalesceUpdates: Swift.Bool
+  }
+  @_Concurrency.MainActor(unsafe) public var updatesConfig: Chatto.BaseChatViewController.UpdatesConfig
+  @_Concurrency.MainActor(unsafe) open var customPresentersConfigurationPoint: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var collectionView: UIKit.UICollectionView? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) final public var chatItemCompanionCollection: Chatto.ReadOnlyOrderedDictionary<Chatto.ChatItemCompanion> {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) final public var chatDataSource: (any Chatto.ChatDataSourceProtocol)? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var placeMessagesFromBottom: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var substitutesMainViewAutomatically: Swift.Bool
+  @_Concurrency.MainActor(unsafe) final public func setChatDataSource(_ dataSource: (any Chatto.ChatDataSourceProtocol)?, triggeringUpdateType updateType: Chatto.UpdateType?)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func loadView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) public var endsEditingWhenTappingOnChatBackground: Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) open func userDidTapOnCollectionView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) open func setupKeyboardTracker()
+  @_Concurrency.MainActor(unsafe) public var isFirstLayout: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) public var allContentFits: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var inputBarContainer: UIKit.UIView! {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var inputContentContainer: UIKit.UIView! {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var presenterFactory: (any Chatto.ChatItemPresenterFactoryProtocol)! {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var updateQueue: any Chatto.SerialTaskQueueProtocol {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var chatItemsDecorator: (any Chatto.ChatItemsDecoratorProtocol)?
+  @_Concurrency.MainActor(unsafe) open func createCollectionViewLayout() -> UIKit.UICollectionViewLayout
+  @_Concurrency.MainActor(unsafe) open func createPresenterFactory() -> any Chatto.ChatItemPresenterFactoryProtocol
+  @_Concurrency.MainActor(unsafe) open func createPresenterBuilders() -> [Chatto.ChatItemType : [any Chatto.ChatItemPresenterBuilderProtocol]]
+  @_Concurrency.MainActor(unsafe) open func createChatInputView() -> UIKit.UIView
+  @_Concurrency.MainActor(unsafe) open func referenceIndexPathsToRestoreScrollPositionOnUpdate(itemsBeforeUpdate: Chatto.BaseChatViewController.ChatItemCompanionCollection, changes: Chatto.CollectionChanges) -> (beforeUpdate: Foundation.IndexPath?, afterUpdate: Foundation.IndexPath?)
+  @_Concurrency.MainActor(unsafe) open func chatDataSourceDidUpdate(_ chatDataSource: any Chatto.ChatDataSourceProtocol, updateType: Chatto.UpdateType)
+  @_Concurrency.MainActor(unsafe) open func chatDataSourceDidUpdate(_ chatDataSource: any Chatto.ChatDataSourceProtocol)
+  @_Concurrency.MainActor(unsafe) public var keyboardStatus: Chatto.KeyboardStatus {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var maximumInputSize: CoreFoundation.CGSize {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var inputContentBottomMargin: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open func changeInputContentBottomMarginTo(_ newValue: CoreFoundation.CGFloat, animated: Swift.Bool = false, callback: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) open func changeInputContentBottomMarginTo(_ newValue: CoreFoundation.CGFloat, animated: Swift.Bool = false, duration: CoreFoundation.CFTimeInterval, initialSpringVelocity: CoreFoundation.CGFloat = 0.0, callback: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) open func changeInputContentBottomMarginTo(_ newValue: CoreFoundation.CGFloat, animated: Swift.Bool = false, duration: CoreFoundation.CFTimeInterval, timingFunction: QuartzCore.CAMediaTimingFunction, callback: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension Chatto.BaseChatViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+}
+extension Chatto.BaseChatViewController {
+  @_Concurrency.MainActor(unsafe) final public var accessoryViewRevealerIsEnabled: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var accessoryViewRevealerConfig: Chatto.AccessoryViewRevealerConfig {
+    get
+    set
+  }
+}
+extension Chatto.BaseChatViewController : Chatto.ChatCollectionViewLayoutDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @objc(collectionView:cellForItemAtIndexPath:) @_Concurrency.MainActor(unsafe) dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @objc(collectionView:didEndDisplayingCell:forItemAtIndexPath:) @_Concurrency.MainActor(unsafe) dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, didEndDisplaying cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
+  @objc(collectionView:willDisplayCell:forItemAtIndexPath:) @_Concurrency.MainActor(unsafe) dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
+  @objc(collectionView:shouldShowMenuForItemAtIndexPath:) @_Concurrency.MainActor(unsafe) dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, shouldShowMenuForItemAt indexPath: Foundation.IndexPath?) -> Swift.Bool
+  @objc(collectionView:canPerformAction:forItemAtIndexPath:withSender:) @_Concurrency.MainActor(unsafe) dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, canPerformAction action: ObjectiveC.Selector, forItemAt indexPath: Foundation.IndexPath?, withSender sender: Any?) -> Swift.Bool
+  @objc(collectionView:performAction:forItemAtIndexPath:withSender:) @_Concurrency.MainActor(unsafe) dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, performAction action: ObjectiveC.Selector, forItemAt indexPath: Foundation.IndexPath, withSender sender: Any?)
+  @_Concurrency.MainActor(unsafe) public func createPresenterForChatItem(_ chatItem: any Chatto.ChatItemProtocol) -> any Chatto.ChatItemPresenterProtocol
+  @_Concurrency.MainActor(unsafe) public func confugureCollectionViewWithPresenters()
+  @_Concurrency.MainActor(unsafe) public func decorationAttributesForIndexPath(_ indexPath: Foundation.IndexPath) -> (any Chatto.ChatItemDecorationAttributesProtocol)?
+}
+public enum UpdateType {
+  case normal
+  case firstLoad
+  case pagination
+  case reload
+  case messageCountReduction
+  public static func == (a: Chatto.UpdateType, b: Chatto.UpdateType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol ChatDataSourceDelegateProtocol : AnyObject {
+  func chatDataSourceDidUpdate(_ chatDataSource: any Chatto.ChatDataSourceProtocol)
+  func chatDataSourceDidUpdate(_ chatDataSource: any Chatto.ChatDataSourceProtocol, updateType: Chatto.UpdateType)
+}
+public protocol ChatDataSourceProtocol : AnyObject {
+  var hasMoreNext: Swift.Bool { get }
+  var hasMorePrevious: Swift.Bool { get }
+  var chatItems: [any Chatto.ChatItemProtocol] { get }
+  var delegate: (any Chatto.ChatDataSourceDelegateProtocol)? { get set }
+  func loadNext()
+  func loadPrevious()
+  func adjustNumberOfMessages(preferredMaxCount: Swift.Int?, focusPosition: Swift.Double, completion: (_ didAdjust: Swift.Bool) -> Swift.Void)
+}
+public enum KeyboardStatus {
+  case hiding
+  case hidden
+  case showing
+  case shown
+  public static func == (a: Chatto.KeyboardStatus, b: Chatto.KeyboardStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public typealias KeyboardHeightBlock = (_ height: CoreFoundation.CGFloat, _ status: Chatto.KeyboardStatus) -> Swift.Void
+public struct ReadOnlyOrderedDictionary<T> : Swift.Collection where T : Chatto.UniqueIdentificable {
+  public init(items: [T])
+  public func indexOf(_ uid: Swift.String) -> Swift.Int?
+  public subscript(index: Swift.Int) -> T {
+    get
+  }
+  public subscript(uid: Swift.String) -> T? {
+    get
+  }
+  public func makeIterator() -> Swift.IndexingIterator<[T]>
+  public func index(_ i: Swift.Int, offsetBy n: Swift.Int) -> Swift.Int
+  public func index(_ i: Swift.Int, offsetBy n: Swift.Int, limitedBy limit: Swift.Int) -> Swift.Int?
+  public func index(after i: Swift.Int) -> Swift.Int
+  public var startIndex: Swift.Int {
+    get
+  }
+  public var endIndex: Swift.Int {
+    get
+  }
+  public typealias Element = T
+  public typealias Index = Swift.Int
+  public typealias Indices = Swift.DefaultIndices<Chatto.ReadOnlyOrderedDictionary<T>>
+  public typealias Iterator = Swift.IndexingIterator<[T]>
+  public typealias SubSequence = Swift.Slice<Chatto.ReadOnlyOrderedDictionary<T>>
+}
+public protocol InputPositionControlling : AnyObject {
+  var keyboardStatus: Chatto.KeyboardStatus { get }
+  var inputBarContainer: UIKit.UIView! { get }
+  var maximumInputSize: CoreFoundation.CGSize { get }
+  var inputContentContainer: UIKit.UIView! { get }
+  var inputContentBottomMargin: CoreFoundation.CGFloat { get }
+  func changeInputContentBottomMarginTo(_ newValue: CoreFoundation.CGFloat, animated: Swift.Bool, callback: (() -> Swift.Void)?)
+  func changeInputContentBottomMarginTo(_ newValue: CoreFoundation.CGFloat, animated: Swift.Bool, duration: CoreFoundation.CFTimeInterval, initialSpringVelocity: CoreFoundation.CGFloat, callback: (() -> Swift.Void)?)
+  func changeInputContentBottomMarginTo(_ newValue: CoreFoundation.CGFloat, animated: Swift.Bool, duration: CoreFoundation.CFTimeInterval, timingFunction: QuartzCore.CAMediaTimingFunction, callback: (() -> Swift.Void)?)
+}
+public protocol AccessoryViewRevealable {
+  func revealAccessoryView(withOffset offset: CoreFoundation.CGFloat, animated: Swift.Bool)
+  func preferredOffsetToRevealAccessoryView() -> CoreFoundation.CGFloat?
+  var allowAccessoryViewRevealing: Swift.Bool { get }
+}
+public struct AccessoryViewRevealerConfig {
+  public let angleThresholdInRads: CoreFoundation.CGFloat
+  public let translationTransform: (_ rawTranslation: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat
+  public init(angleThresholdInRads: CoreFoundation.CGFloat, translationTransform: @escaping (_ rawTranslation: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat)
+  public static func defaultConfig() -> Chatto.AccessoryViewRevealerConfig
+}
+infix operator >=~ : DefaultPrecedence
+public typealias ChatItemType = Swift.String
+public protocol ChatItemProtocol : AnyObject, Chatto.UniqueIdentificable {
+  var type: Chatto.ChatItemType { get }
+}
+public protocol ChatItemDecorationAttributesProtocol {
+  var bottomMargin: CoreFoundation.CGFloat { get }
+}
+public protocol ChatItemMenuPresenterProtocol {
+  func shouldShowMenu() -> Swift.Bool
+  func canPerformMenuControllerAction(_ action: ObjectiveC.Selector) -> Swift.Bool
+  func performMenuControllerAction(_ action: ObjectiveC.Selector)
+}
+public protocol ChatItemPresenterProtocol : AnyObject, Chatto.ChatItemMenuPresenterProtocol {
+  static func registerCells(_ collectionView: UIKit.UICollectionView)
+  var canCalculateHeightInBackground: Swift.Bool { get }
+  func heightForCell(maximumWidth width: CoreFoundation.CGFloat, decorationAttributes: (any Chatto.ChatItemDecorationAttributesProtocol)?) -> CoreFoundation.CGFloat
+  func dequeueCell(collectionView: UIKit.UICollectionView, indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  func configureCell(_ cell: UIKit.UICollectionViewCell, decorationAttributes: (any Chatto.ChatItemDecorationAttributesProtocol)?)
+  func cellWillBeShown(_ cell: UIKit.UICollectionViewCell)
+  func cellWasHidden(_ cell: UIKit.UICollectionViewCell)
+}
+extension Chatto.ChatItemPresenterProtocol {
+  public var canCalculateHeightInBackground: Swift.Bool {
+    get
+  }
+  public func cellWillBeShown(_ cell: UIKit.UICollectionViewCell)
+  public func cellWasHidden(_ cell: UIKit.UICollectionViewCell)
+  public func shouldShowMenu() -> Swift.Bool
+  public func canPerformMenuControllerAction(_ action: ObjectiveC.Selector) -> Swift.Bool
+  public func performMenuControllerAction(_ action: ObjectiveC.Selector)
+}
+public protocol ChatItemPresenterBuilderProtocol {
+  func canHandleChatItem(_ chatItem: any Chatto.ChatItemProtocol) -> Swift.Bool
+  func createPresenterWithChatItem(_ chatItem: any Chatto.ChatItemProtocol) -> any Chatto.ChatItemPresenterProtocol
+  var presenterType: any Chatto.ChatItemPresenterProtocol.Type { get }
+}
+public protocol UniqueIdentificable {
+  var uid: Swift.String { get }
+}
+public struct CollectionChangeMove : Swift.Equatable, Swift.Hashable {
+  public let indexPathOld: Foundation.IndexPath
+  public let indexPathNew: Foundation.IndexPath
+  public init(indexPathOld: Foundation.IndexPath, indexPathNew: Foundation.IndexPath)
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public func == (lhs: Chatto.CollectionChangeMove, rhs: Chatto.CollectionChangeMove) -> Swift.Bool
+public struct CollectionChanges {
+  public let insertedIndexPaths: Swift.Set<Foundation.IndexPath>
+  public let deletedIndexPaths: Swift.Set<Foundation.IndexPath>
+  public let movedIndexPaths: [Chatto.CollectionChangeMove]
+}
+extension Chatto.ChatItemVisibility : Swift.Equatable {}
+extension Chatto.ChatItemVisibility : Swift.Hashable {}
+extension Chatto.CellVerticalEdge : Swift.Equatable {}
+extension Chatto.CellVerticalEdge : Swift.Hashable {}
+extension Chatto.UpdateType : Swift.Equatable {}
+extension Chatto.UpdateType : Swift.Hashable {}
+extension Chatto.KeyboardStatus : Swift.Equatable {}
+extension Chatto.KeyboardStatus : Swift.Hashable {}

@@ -1,0 +1,1732 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios16.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name ThirdParty
+import AVFoundation
+import Chatto
+import CoreGraphics
+import CoreTelephony
+import DeveloperToolsSupport
+import Foundation
+import Photos
+import PhotosUI
+import Swift
+import SwiftUI
+import SystemConfiguration
+@_exported import ThirdParty
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension CoreFoundation.CGRect {
+  public var bma_bounds: CoreFoundation.CGRect {
+    get
+  }
+  public var bma_center: CoreFoundation.CGPoint {
+    get
+  }
+  public var bma_maxY: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  public func bma_round(scale: CoreFoundation.CGFloat = UIMainScreenScale) -> CoreFoundation.CGRect
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class InputContainerView : UIKit.UIInputView {
+  @_Concurrency.MainActor(unsafe) public var contentHeight: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var contentView: UIKit.UIView? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect, inputViewStyle: UIKit.UIInputView.Style)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public let TrueTimeVersionNumber: Swift.Double
+public let TrueTimeVersionString: Swift.String
+public let TrueTimeErrorDomain: Swift.String
+extension Foundation.NSNotification.Name {
+  public static let TrueTimeUpdated: Foundation.Notification.Name
+}
+@objc public enum TrueTimeError : Swift.Int {
+  case cannotFindHost
+  case dnsLookupFailed
+  case timedOut
+  case offline
+  case badServerResponse
+  case noValidPacket
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc(NTPReferenceTime) final public class ReferenceTime : ObjectiveC.NSObject {
+  @objc final public var uptimeInterval: Foundation.TimeInterval {
+    @objc get
+  }
+  @objc final public var time: Foundation.Date {
+    @objc get
+  }
+  @objc final public var uptime: Darwin.timeval {
+    @objc get
+  }
+  @objc final public func now() -> Foundation.Date
+  convenience public init(time: Foundation.Date, uptime: Darwin.timeval)
+  @objc override final public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+public typealias ReferenceTimeResult = Swift.Result<ThirdParty.ReferenceTime, Foundation.NSError>
+public typealias ReferenceTimeCallback = (ThirdParty.ReferenceTimeResult) -> Swift.Void
+public typealias LogCallback = (Swift.String) -> Swift.Void
+@objc final public class TrueTimeClient : ObjectiveC.NSObject {
+  @objc public static let sharedInstance: ThirdParty.TrueTimeClient
+  @objc required public init(timeout: Foundation.TimeInterval = 8, maxRetries: Swift.Int = 3, maxConnections: Swift.Int = 5, maxServers: Swift.Int = 5, numberOfSamples: Swift.Int = 4, pollInterval: Foundation.TimeInterval = 512)
+  @objc final public func start(pool: [Swift.String] = ["time.apple.com"], port: Swift.Int = 123)
+  @objc final public func pause()
+  final public func fetchIfNeeded(queue callbackQueue: Dispatch.DispatchQueue = .main, first: ThirdParty.ReferenceTimeCallback? = nil, completion: ThirdParty.ReferenceTimeCallback? = nil)
+  @objc final public var referenceTime: ThirdParty.ReferenceTime? {
+    @objc get
+  }
+  @objc final public var timeout: Foundation.TimeInterval {
+    @objc get
+  }
+  @objc final public var maxRetries: Swift.Int {
+    @objc get
+  }
+  @objc final public var maxConnections: Swift.Int {
+    @objc get
+  }
+  @objc final public var maxServers: Swift.Int {
+    @objc get
+  }
+  @objc final public var numberOfSamples: Swift.Int {
+    @objc get
+  }
+  @objc deinit
+}
+extension ThirdParty.TrueTimeClient {
+  @objc final public func fetchFirstIfNeeded(success: @escaping (ThirdParty.ReferenceTime) -> Swift.Void, failure: ((Foundation.NSError) -> Swift.Void)?)
+  @objc final public func fetchIfNeeded(success: @escaping (ThirdParty.ReferenceTime) -> Swift.Void, failure: ((Foundation.NSError) -> Swift.Void)?)
+  @objc final public func fetchFirstIfNeeded(success: @escaping (ThirdParty.ReferenceTime) -> Swift.Void, failure: ((Foundation.NSError) -> Swift.Void)?, onQueue queue: Dispatch.DispatchQueue)
+  @objc final public func fetchIfNeeded(success: @escaping (ThirdParty.ReferenceTime) -> Swift.Void, failure: ((Foundation.NSError) -> Swift.Void)?, onQueue queue: Dispatch.DispatchQueue)
+}
+extension CoreFoundation.CGFloat {
+  public func bma_round(scale: CoreFoundation.CGFloat = UIMainScreenScale) -> CoreFoundation.CGFloat
+}
+public enum CircleIconType {
+  case undefined
+  case infinity
+  case exclamation
+  case check
+  case arrowDown
+  case arrowUp
+  case stop
+  case text
+  public static func == (a: ThirdParty.CircleIconType, b: ThirdParty.CircleIconType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol PasteActionInterceptor {
+  func canPerformPaste(withSender sender: Any?) -> Swift.Bool
+  func performPaste() -> Swift.Bool
+}
+public let UIMainScreenScale: CoreFoundation.CGFloat
+public protocol TextMessageModelProtocol : ThirdParty.DecoratedMessageModelProtocol {
+  var text: Swift.String { get }
+}
+open class TextMessageModel<MessageModelT> : ThirdParty.TextMessageModelProtocol where MessageModelT : ThirdParty.MessageModelProtocol {
+  public var messageModel: any ThirdParty.MessageModelProtocol {
+    get
+  }
+  final public let _messageModel: MessageModelT
+  final public let text: Swift.String
+  public init(messageModel: MessageModelT, text: Swift.String)
+  @objc deinit
+}
+public enum ChatInputItemPresentationMode : Swift.UInt {
+  case keyboard
+  case customView
+  case none
+  public init?(rawValue: Swift.UInt)
+  public typealias RawValue = Swift.UInt
+  public var rawValue: Swift.UInt {
+    get
+  }
+}
+public protocol ChatInputItemProtocol : AnyObject {
+  var tabView: UIKit.UIView { get }
+  var inputView: UIKit.UIView? { get }
+  var presentationMode: ThirdParty.ChatInputItemPresentationMode { get }
+  var showsSendButton: Swift.Bool { get }
+  var selected: Swift.Bool { get set }
+  var supportsExpandableState: Swift.Bool { get }
+  var expandedStateTopMargin: CoreFoundation.CGFloat { get }
+  func handleInput(_ input: Swift.AnyObject)
+}
+open class BaseMessageCollectionViewCellDefaultStyle : ThirdParty.BaseMessageCollectionViewCellStyleProtocol {
+  public struct Colors {
+    public init(incoming: @autoclosure @escaping () -> UIKit.UIColor, outgoing: @autoclosure @escaping () -> UIKit.UIColor)
+  }
+  public struct BubbleBorderImages {
+    public let borderIncomingTail: () -> UIKit.UIImage
+    public let borderIncomingNoTail: () -> UIKit.UIImage
+    public let borderOutgoingTail: () -> UIKit.UIImage
+    public let borderOutgoingNoTail: () -> UIKit.UIImage
+    public init(borderIncomingTail: @autoclosure @escaping () -> UIKit.UIImage, borderIncomingNoTail: @autoclosure @escaping () -> UIKit.UIImage, borderOutgoingTail: @autoclosure @escaping () -> UIKit.UIImage, borderOutgoingNoTail: @autoclosure @escaping () -> UIKit.UIImage)
+  }
+  public struct FailedIconImages {
+    public init(normal: @autoclosure @escaping () -> UIKit.UIImage, highlighted: @autoclosure @escaping () -> UIKit.UIImage)
+  }
+  public struct DateTextStyle {
+    public init(font: @autoclosure @escaping () -> UIKit.UIFont, color: @autoclosure @escaping () -> UIKit.UIColor)
+  }
+  public struct AvatarStyle {
+    public init(size: CoreFoundation.CGSize = .zero, alignment: ThirdParty.VerticalAlignment = .bottom)
+  }
+  public struct SelectionIndicatorStyle {
+    public init(margins: UIKit.UIEdgeInsets, selectedIcon: @autoclosure @escaping () -> UIKit.UIImage, deselectedIcon: @autoclosure @escaping () -> UIKit.UIImage)
+  }
+  public init(colors: ThirdParty.BaseMessageCollectionViewCellDefaultStyle.Colors = BaseMessageCollectionViewCellDefaultStyle.createDefaultColors(), bubbleBorderImages: ThirdParty.BaseMessageCollectionViewCellDefaultStyle.BubbleBorderImages? = BaseMessageCollectionViewCellDefaultStyle.createDefaultBubbleBorderImages(), failedIconImages: ThirdParty.BaseMessageCollectionViewCellDefaultStyle.FailedIconImages = BaseMessageCollectionViewCellDefaultStyle.createDefaultFailedIconImages(), layoutConstants: ThirdParty.BaseMessageCollectionViewCellLayoutConstants = BaseMessageCollectionViewCellDefaultStyle.createDefaultLayoutConstants(), dateTextStyle: ThirdParty.BaseMessageCollectionViewCellDefaultStyle.DateTextStyle = BaseMessageCollectionViewCellDefaultStyle.createDefaultDateTextStyle(), avatarStyle: ThirdParty.BaseMessageCollectionViewCellDefaultStyle.AvatarStyle = AvatarStyle(), selectionIndicatorStyle: ThirdParty.BaseMessageCollectionViewCellDefaultStyle.SelectionIndicatorStyle = BaseMessageCollectionViewCellDefaultStyle.createDefaultSelectionIndicatorStyle())
+  public var baseColorIncoming: UIKit.UIColor {
+    get
+    set
+  }
+  public var baseColorOutgoing: UIKit.UIColor {
+    get
+    set
+  }
+  public var borderIncomingTail: UIKit.UIImage? {
+    get
+    set
+  }
+  public var borderIncomingNoTail: UIKit.UIImage? {
+    get
+    set
+  }
+  public var borderOutgoingTail: UIKit.UIImage? {
+    get
+    set
+  }
+  public var borderOutgoingNoTail: UIKit.UIImage? {
+    get
+    set
+  }
+  public var failedIcon: UIKit.UIImage {
+    get
+    set
+  }
+  public var failedIconHighlighted: UIKit.UIImage {
+    get
+    set
+  }
+  open func attributedStringForDate(_ date: Swift.String) -> Foundation.NSAttributedString
+  open func borderImage(viewModel: any ThirdParty.MessageViewModelProtocol) -> UIKit.UIImage?
+  open func avatarSize(viewModel: any ThirdParty.MessageViewModelProtocol) -> CoreFoundation.CGSize
+  open func avatarVerticalAlignment(viewModel: any ThirdParty.MessageViewModelProtocol) -> ThirdParty.VerticalAlignment
+  public var selectionIndicatorMargins: UIKit.UIEdgeInsets {
+    get
+  }
+  public func selectionIndicatorIcon(for viewModel: any ThirdParty.MessageViewModelProtocol) -> UIKit.UIImage
+  open func layoutConstants(viewModel: any ThirdParty.MessageViewModelProtocol) -> ThirdParty.BaseMessageCollectionViewCellLayoutConstants
+  @objc deinit
+}
+extension ThirdParty.BaseMessageCollectionViewCellDefaultStyle {
+  public static func createDefaultColors() -> ThirdParty.BaseMessageCollectionViewCellDefaultStyle.Colors
+  public static func createDefaultBubbleBorderImages() -> ThirdParty.BaseMessageCollectionViewCellDefaultStyle.BubbleBorderImages
+  public static func createDefaultFailedIconImages() -> ThirdParty.BaseMessageCollectionViewCellDefaultStyle.FailedIconImages
+  public static func createDefaultDateTextStyle() -> ThirdParty.BaseMessageCollectionViewCellDefaultStyle.DateTextStyle
+  public static func createDefaultLayoutConstants() -> ThirdParty.BaseMessageCollectionViewCellLayoutConstants
+  public static func createDefaultSelectionIndicatorStyle() -> ThirdParty.BaseMessageCollectionViewCellDefaultStyle.SelectionIndicatorStyle
+}
+public struct CountryViewTheme {
+  public let countryCodeTextColor: UIKit.UIColor
+  public let countryNameTextColor: UIKit.UIColor
+  public let rowBackgroundColor: UIKit.UIColor
+  public let showFlagsBorder: Swift.Bool
+  public init(countryCodeTextColor: UIKit.UIColor = UIColor.gray, countryNameTextColor: UIKit.UIColor = UIColor.darkGray, rowBackgroundColor: UIKit.UIColor = UIColor.white, showFlagsBorder: Swift.Bool = true)
+}
+@available(iOS 11, *)
+final public class CompoundMessagePresenterBuilder<ViewModelBuilderT, InteractionHandlerT> : Chatto.ChatItemPresenterBuilderProtocol where ViewModelBuilderT : ThirdParty.ViewModelBuilderProtocol, InteractionHandlerT : ThirdParty.BaseMessageInteractionHandlerProtocol, ViewModelBuilderT.ModelT : Swift.Equatable, ViewModelBuilderT.ViewModelT == InteractionHandlerT.ViewModelT {
+  public typealias ModelT = ViewModelBuilderT.ModelT
+  public typealias ViewModelT = ViewModelBuilderT.ViewModelT
+  public init(viewModelBuilder: ViewModelBuilderT, interactionHandler: InteractionHandlerT?, accessibilityIdentifier: Swift.String?, contentFactories: [ThirdParty.AnyMessageContentFactory<ThirdParty.CompoundMessagePresenterBuilder<ViewModelBuilderT, InteractionHandlerT>.ModelT>])
+  final public let viewModelBuilder: ViewModelBuilderT
+  final public let interactionHandler: InteractionHandlerT?
+  final public let sizingCell: ThirdParty.CompoundMessageCollectionViewCell<ThirdParty.CompoundMessagePresenterBuilder<ViewModelBuilderT, InteractionHandlerT>.ModelT>
+  final public var compoundCellStyle: any ThirdParty.CompoundBubbleViewStyleProtocol {
+    get
+    set
+  }
+  final public var baseCellStyle: any ThirdParty.BaseMessageCollectionViewCellStyleProtocol {
+    get
+    set
+  }
+  final public func canHandleChatItem(_ chatItem: any Chatto.ChatItemProtocol) -> Swift.Bool
+  final public func createPresenterWithChatItem(_ chatItem: any Chatto.ChatItemProtocol) -> any Chatto.ChatItemPresenterProtocol
+  final public var presenterType: any Chatto.ChatItemPresenterProtocol.Type {
+    get
+  }
+  @objc deinit
+}
+open class TextMessagePresenter<ViewModelBuilderT, InteractionHandlerT> : ThirdParty.BaseMessagePresenter<ThirdParty.TextBubbleView, ViewModelBuilderT, InteractionHandlerT> where ViewModelBuilderT : ThirdParty.ViewModelBuilderProtocol, InteractionHandlerT : ThirdParty.BaseMessageInteractionHandlerProtocol, ViewModelBuilderT.ViewModelT : ThirdParty.TextMessageViewModelProtocol, ViewModelBuilderT.ViewModelT == InteractionHandlerT.ViewModelT {
+  public typealias ModelT = ViewModelBuilderT.ModelT
+  public typealias ViewModelT = ViewModelBuilderT.ViewModelT
+  public init(messageModel: ThirdParty.TextMessagePresenter<ViewModelBuilderT, InteractionHandlerT>.ModelT, viewModelBuilder: ViewModelBuilderT, interactionHandler: InteractionHandlerT?, sizingCell: ThirdParty.TextMessageCollectionViewCell, baseCellStyle: any ThirdParty.BaseMessageCollectionViewCellStyleProtocol, textCellStyle: any ThirdParty.TextBubbleViewStyleProtocol, layoutCache: Foundation.NSCache<Swift.AnyObject, Swift.AnyObject>)
+  final override public class func registerCells(_ collectionView: UIKit.UICollectionView)
+  final override public func dequeueCell(collectionView: UIKit.UICollectionView, indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  override open func createViewModel() -> ViewModelBuilderT.ViewModelT
+  public var textCell: ThirdParty.TextMessageCollectionViewCell? {
+    get
+  }
+  override open func configureCell(_ cell: ThirdParty.BaseMessageCollectionViewCell<ThirdParty.TextBubbleView>, decorationAttributes: ThirdParty.ChatItemDecorationAttributes, animated: Swift.Bool, additionalConfiguration: (() -> Swift.Void)?)
+  public func updateCurrentCell()
+  override open func canShowMenu() -> Swift.Bool
+  override open func canPerformMenuControllerAction(_ action: ObjectiveC.Selector) -> Swift.Bool
+  override open func performMenuControllerAction(_ action: ObjectiveC.Selector)
+  @objc deinit
+}
+@objc public protocol CountryPickerDelegate {
+  @objc func countryPhoneCodePicker(_ picker: ThirdParty.CountryPicker, didSelectCountryWithName name: Swift.String, countryCode: Swift.String, phoneCode: Swift.String, flag: UIKit.UIImage)
+}
+public struct Country {
+  public let code: Swift.String?
+  public let name: Swift.String?
+  public let phoneCode: Swift.String?
+  public let flagName: Swift.String
+  public var flag: UIKit.UIImage? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) open class CountryPicker : UIKit.UIPickerView, UIKit.UIPickerViewDelegate, UIKit.UIPickerViewDataSource, UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor(unsafe) open var currentCountry: ThirdParty.Country?
+  @objc @_Concurrency.MainActor(unsafe) open var displayOnlyCountriesWithCodes: [Swift.String]?
+  @objc @_Concurrency.MainActor(unsafe) open var exeptCountriesWithCodes: [Swift.String]?
+  @objc @_Concurrency.MainActor(unsafe) weak open var countryPickerDelegate: (any ThirdParty.CountryPickerDelegate)?
+  @objc @_Concurrency.MainActor(unsafe) open var showPhoneNumbers: Swift.Bool
+  @_Concurrency.MainActor(unsafe) open var theme: ThirdParty.CountryViewTheme?
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) open func setCountry(_ code: Swift.String)
+  @_Concurrency.MainActor(unsafe) open func setCountryByPhoneCode(_ phoneCode: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc open func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc open func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc open func pickerView(_ pickerView: UIKit.UIPickerView, viewForRow row: Swift.Int, forComponent component: Swift.Int, reusing view: UIKit.UIView?) -> UIKit.UIView
+  @_Concurrency.MainActor(unsafe) @objc open func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+  @objc deinit
+}
+open class TextMessagePresenterBuilder<ViewModelBuilderT, InteractionHandlerT> : Chatto.ChatItemPresenterBuilderProtocol where ViewModelBuilderT : ThirdParty.ViewModelBuilderProtocol, InteractionHandlerT : ThirdParty.BaseMessageInteractionHandlerProtocol, ViewModelBuilderT.ViewModelT : ThirdParty.TextMessageViewModelProtocol, ViewModelBuilderT.ViewModelT == InteractionHandlerT.ViewModelT {
+  public init(viewModelBuilder: ViewModelBuilderT, interactionHandler: InteractionHandlerT? = nil)
+  public var textCellStyle: any ThirdParty.TextBubbleViewStyleProtocol {
+    get
+    set
+  }
+  public var baseMessageStyle: any ThirdParty.BaseMessageCollectionViewCellStyleProtocol {
+    get
+    set
+  }
+  open func canHandleChatItem(_ chatItem: any Chatto.ChatItemProtocol) -> Swift.Bool
+  open func createPresenterWithChatItem(_ chatItem: any Chatto.ChatItemProtocol) -> any Chatto.ChatItemPresenterProtocol
+  open func createPresenter(withChatItem chatItem: any Chatto.ChatItemProtocol, viewModelBuilder: ViewModelBuilderT, interactionHandler: InteractionHandlerT?, sizingCell: ThirdParty.TextMessageCollectionViewCell, baseCellStyle: any ThirdParty.BaseMessageCollectionViewCellStyleProtocol, textCellStyle: any ThirdParty.TextBubbleViewStyleProtocol, layoutCache: Foundation.NSCache<Swift.AnyObject, Swift.AnyObject>) -> ThirdParty.TextMessagePresenter<ViewModelBuilderT, InteractionHandlerT>
+  open var presenterType: any Chatto.ChatItemPresenterProtocol.Type {
+    get
+  }
+  @objc deinit
+}
+public struct Cache<Key, Value> where Key : Swift.Hashable {
+  public init()
+  public subscript(key: Key) -> Value? {
+    get
+    nonmutating set
+  }
+}
+extension Darwin.timeval {
+  public static func uptime() -> Darwin.timeval
+  public var milliseconds: Swift.Int64 {
+    get
+  }
+}
+extension Darwin.sockaddr_in6 : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension Darwin.sockaddr_in : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension ThirdParty.ntp_packet_t : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension ThirdParty.TrueTimeError : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public protocol PhotoMessageModelProtocol : ThirdParty.DecoratedMessageModelProtocol {
+  var image: UIKit.UIImage { get }
+  var imageSize: CoreFoundation.CGSize { get }
+}
+open class PhotoMessageModel<MessageModelT> : ThirdParty.PhotoMessageModelProtocol where MessageModelT : ThirdParty.MessageModelProtocol {
+  public var messageModel: any ThirdParty.MessageModelProtocol {
+    get
+  }
+  final public let _messageModel: MessageModelT
+  final public let image: UIKit.UIImage
+  final public let imageSize: CoreFoundation.CGSize
+  public init(messageModel: MessageModelT, imageSize: CoreFoundation.CGSize, image: UIKit.UIImage)
+  @objc deinit
+}
+extension UIKit.UIEdgeInsets {
+  public var bma_horziontalInset: CoreFoundation.CGFloat {
+    get
+  }
+  public var bma_verticalInset: CoreFoundation.CGFloat {
+    get
+  }
+}
+extension UIKit.UIEdgeInsets : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class Observable<T> {
+  public init(_ value: T)
+  public var value: T {
+    get
+    set
+  }
+  public func observe(_ observer: Swift.AnyObject, closure: @escaping (_ old: T, _ new: T) -> Swift.Void)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @available(iOS 11, *)
+@_Concurrency.MainActor(unsafe) final public class CompoundBubbleView : UIKit.UIView, ThirdParty.MaximumLayoutWidthSpecificable, ThirdParty.BackgroundSizingQueryable {
+  public struct DecoratedView {
+    public init(view: UIKit.UIView, showBorder: Swift.Bool)
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) final public var decoratedContentViews: [ThirdParty.CompoundBubbleView.DecoratedView] {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var style: (any ThirdParty.CompoundBubbleViewStyleProtocol)? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var viewModel: (any ThirdParty.MessageViewModelProtocol)? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var layoutProvider: ThirdParty.CompoundBubbleLayoutProvider?
+  @_Concurrency.MainActor(unsafe) final public var preferredMaxLayoutWidth: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) final public var canCalculateSizeInBackground: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public var safeAreaInsets: UIKit.UIEdgeInsets {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override final public func layoutSubviews()
+  @objc deinit
+}
+public typealias PhotoMessageCollectionViewCellStyleProtocol = ThirdParty.PhotoBubbleViewStyleProtocol
+@_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class PhotoMessageCollectionViewCell : ThirdParty.BaseMessageCollectionViewCell<ThirdParty.PhotoBubbleView> {
+  @_Concurrency.MainActor(unsafe) override final public func createBubbleView() -> ThirdParty.PhotoBubbleView
+  @_Concurrency.MainActor(unsafe) override final public var viewContext: ThirdParty.ViewContext {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var photoMessageViewModel: (any ThirdParty.PhotoMessageViewModelProtocol)! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var photoMessageStyle: (any ThirdParty.PhotoBubbleViewStyleProtocol)! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) override final public func performBatchUpdates(_ updateClosure: @escaping () -> Swift.Void, animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct CompoundBubbleLayout {
+  public let size: CoreFoundation.CGSize
+  public let subviewsFrames: [CoreFoundation.CGRect]
+  public let safeAreaInsets: UIKit.UIEdgeInsets
+}
+public struct CompoundBubbleLayoutProvider {
+  public struct Configuration : Swift.Hashable {
+    public init(layoutProviders: [any ThirdParty.MessageManualLayoutProviderProtocol], tailWidth: CoreFoundation.CGFloat, isIncoming: Swift.Bool)
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (lhs: ThirdParty.CompoundBubbleLayoutProvider.Configuration, rhs: ThirdParty.CompoundBubbleLayoutProvider.Configuration) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(configuration: ThirdParty.CompoundBubbleLayoutProvider.Configuration)
+  public func layout(forMaxWidth width: CoreFoundation.CGFloat) -> ThirdParty.CompoundBubbleLayout
+}
+open class PhotoMessagePresenter<ViewModelBuilderT, InteractionHandlerT> : ThirdParty.BaseMessagePresenter<ThirdParty.PhotoBubbleView, ViewModelBuilderT, InteractionHandlerT> where ViewModelBuilderT : ThirdParty.ViewModelBuilderProtocol, InteractionHandlerT : ThirdParty.BaseMessageInteractionHandlerProtocol, ViewModelBuilderT.ViewModelT : ThirdParty.PhotoMessageViewModelProtocol, ViewModelBuilderT.ViewModelT == InteractionHandlerT.ViewModelT {
+  public typealias ModelT = ViewModelBuilderT.ModelT
+  public typealias ViewModelT = ViewModelBuilderT.ViewModelT
+  final public let photoCellStyle: any ThirdParty.PhotoBubbleViewStyleProtocol
+  public init(messageModel: ThirdParty.PhotoMessagePresenter<ViewModelBuilderT, InteractionHandlerT>.ModelT, viewModelBuilder: ViewModelBuilderT, interactionHandler: InteractionHandlerT?, sizingCell: ThirdParty.PhotoMessageCollectionViewCell, baseCellStyle: any ThirdParty.BaseMessageCollectionViewCellStyleProtocol, photoCellStyle: any ThirdParty.PhotoBubbleViewStyleProtocol)
+  final override public class func registerCells(_ collectionView: UIKit.UICollectionView)
+  final override public func dequeueCell(collectionView: UIKit.UICollectionView, indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  override open func createViewModel() -> ViewModelBuilderT.ViewModelT
+  public var photoCell: ThirdParty.PhotoMessageCollectionViewCell? {
+    get
+  }
+  override open func configureCell(_ cell: ThirdParty.BaseMessageCollectionViewCell<ThirdParty.PhotoBubbleView>, decorationAttributes: ThirdParty.ChatItemDecorationAttributes, animated: Swift.Bool, additionalConfiguration: (() -> Swift.Void)?)
+  public func updateCurrentCell()
+  @objc deinit
+}
+extension UIKit.UIColor {
+  public static func bma_color(rgb: Swift.Int) -> UIKit.UIColor
+  public func bma_blendWithColor(_ color: UIKit.UIColor) -> UIKit.UIColor
+}
+public enum MessageViewModelStatus {
+  case success
+  case sending
+  case failed
+  public static func == (a: ThirdParty.MessageViewModelStatus, b: ThirdParty.MessageViewModelStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ThirdParty.MessageStatus {
+  public func viewModelStatus() -> ThirdParty.MessageViewModelStatus
+}
+public protocol MessageViewModelProtocol : AnyObject {
+  var decorationAttributes: ThirdParty.BaseMessageDecorationAttributes { get set }
+  var isIncoming: Swift.Bool { get }
+  var isUserInteractionEnabled: Swift.Bool { get set }
+  var isShowingFailedIcon: Swift.Bool { get }
+  var date: Swift.String { get }
+  var status: ThirdParty.MessageViewModelStatus { get }
+  var avatarImage: ThirdParty.Observable<UIKit.UIImage?> { get set }
+  func willBeShown()
+  func wasHidden()
+}
+extension ThirdParty.MessageViewModelProtocol {
+  public func willBeShown()
+  public func wasHidden()
+}
+public protocol DecoratedMessageViewModelProtocol : ThirdParty.MessageViewModelProtocol {
+  var messageViewModel: any ThirdParty.MessageViewModelProtocol { get }
+}
+extension ThirdParty.DecoratedMessageViewModelProtocol {
+  public var decorationAttributes: ThirdParty.BaseMessageDecorationAttributes {
+    get
+    set
+  }
+  public var isIncoming: Swift.Bool {
+    get
+  }
+  public var isUserInteractionEnabled: Swift.Bool {
+    get
+    set
+  }
+  public var date: Swift.String {
+    get
+  }
+  public var status: ThirdParty.MessageViewModelStatus {
+    get
+  }
+  public var isShowingFailedIcon: Swift.Bool {
+    get
+  }
+  public var avatarImage: ThirdParty.Observable<UIKit.UIImage?> {
+    get
+    set
+  }
+}
+open class MessageViewModel : ThirdParty.MessageViewModelProtocol {
+  open var isIncoming: Swift.Bool {
+    get
+  }
+  open var decorationAttributes: ThirdParty.BaseMessageDecorationAttributes
+  open var isUserInteractionEnabled: Swift.Bool
+  open var status: ThirdParty.MessageViewModelStatus {
+    get
+  }
+  open var date: Swift.String {
+    get
+    set
+  }
+  final public let dateFormatter: Foundation.DateFormatter
+  public var messageModel: any ThirdParty.MessageModelProtocol {
+    get
+  }
+  public init(dateFormatter: Foundation.DateFormatter, messageModel: any ThirdParty.MessageModelProtocol, avatarImage: UIKit.UIImage?, decorationAttributes: ThirdParty.BaseMessageDecorationAttributes)
+  open var isShowingFailedIcon: Swift.Bool {
+    get
+  }
+  public var avatarImage: ThirdParty.Observable<UIKit.UIImage?>
+  @objc deinit
+}
+public class MessageViewModelDefaultBuilder {
+  public init()
+  public func createMessageViewModel(_ message: any ThirdParty.MessageModelProtocol) -> any ThirdParty.MessageViewModelProtocol
+  @objc deinit
+}
+public protocol TextMessageViewModelProtocol : ThirdParty.DecoratedMessageViewModelProtocol {
+  var text: Swift.String { get }
+  var cellAccessibilityIdentifier: Swift.String { get }
+  var bubbleAccessibilityIdentifier: Swift.String { get }
+}
+open class TextMessageViewModel<TextMessageModelT> : ThirdParty.TextMessageViewModelProtocol where TextMessageModelT : ThirdParty.TextMessageModelProtocol {
+  open var text: Swift.String {
+    get
+  }
+  final public let textMessage: TextMessageModelT
+  final public let messageViewModel: any ThirdParty.MessageViewModelProtocol
+  final public let cellAccessibilityIdentifier: Swift.String
+  final public let bubbleAccessibilityIdentifier: Swift.String
+  public init(textMessage: TextMessageModelT, messageViewModel: any ThirdParty.MessageViewModelProtocol)
+  open func willBeShown()
+  open func wasHidden()
+  @objc deinit
+}
+open class TextMessageViewModelDefaultBuilder<TextMessageModelT> : ThirdParty.ViewModelBuilderProtocol where TextMessageModelT : ThirdParty.TextMessageModelProtocol {
+  public init()
+  open func createViewModel(_ textMessage: TextMessageModelT) -> ThirdParty.TextMessageViewModel<TextMessageModelT>
+  open func canCreateViewModel(fromModel model: Any) -> Swift.Bool
+  public typealias ModelT = TextMessageModelT
+  public typealias ViewModelT = ThirdParty.TextMessageViewModel<TextMessageModelT>
+  @objc deinit
+}
+public protocol MessageManualLayoutProviderProtocol : ThirdParty.HashableRepresentible {
+  func sizeThatFits(size: CoreFoundation.CGSize, safeAreaInsets: UIKit.UIEdgeInsets) -> CoreFoundation.CGSize
+}
+public struct TextMessageLayoutProvider : Swift.Hashable, ThirdParty.MessageManualLayoutProviderProtocol {
+  public init(text: Swift.String, font: UIKit.UIFont, textInsets: UIKit.UIEdgeInsets, numberOfLines: Swift.Int = 0)
+  public func sizeThatFits(size: CoreFoundation.CGSize, safeAreaInsets: UIKit.UIEdgeInsets) -> CoreFoundation.CGSize
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: ThirdParty.TextMessageLayoutProvider, b: ThirdParty.TextMessageLayoutProvider) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct ImageMessageLayoutProvider : Swift.Hashable, ThirdParty.MessageManualLayoutProviderProtocol {
+  public init(imageSize: CoreFoundation.CGSize)
+  public func sizeThatFits(size: CoreFoundation.CGSize, safeAreaInsets _: UIKit.UIEdgeInsets) -> CoreFoundation.CGSize
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: ThirdParty.ImageMessageLayoutProvider, b: ThirdParty.ImageMessageLayoutProvider) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol ExpandableTextViewPlaceholderDelegate : AnyObject {
+  func expandableTextViewDidShowPlaceholder(_ textView: ThirdParty.ExpandableTextView)
+  func expandableTextViewDidHidePlaceholder(_ textView: ThirdParty.ExpandableTextView)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ExpandableTextView : UIKit.UITextView {
+  @_Concurrency.MainActor(unsafe) weak public var placeholderDelegate: (any ThirdParty.ExpandableTextViewPlaceholderDelegate)?
+  @_Concurrency.MainActor(unsafe) public var pasteActionInterceptor: (any ThirdParty.PasteActionInterceptor)?
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect, textContainer: UIKit.NSTextContainer?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var contentSize: CoreFoundation.CGSize {
+    @objc get
+    @objc set
+  }
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func didMoveToWindow()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var text: Swift.String! {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var placeholderText: Swift.String {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var textContainerInset: UIKit.UIEdgeInsets {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var textAlignment: UIKit.NSTextAlignment {
+    @objc get
+    @objc set
+  }
+  @available(*, deprecated, message: "use placeholderText property instead")
+  @_Concurrency.MainActor(unsafe) open func setTextPlaceholder(_ textPlaceholder: Swift.String)
+  @_Concurrency.MainActor(unsafe) open func setTextPlaceholderColor(_ color: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) open func setTextPlaceholderFont(_ font: UIKit.UIFont)
+  @_Concurrency.MainActor(unsafe) open func setTextPlaceholderAccessibilityIdentifier(_ accessibilityIdentifier: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func paste(_ sender: Any?)
+}
+public enum HorizontalAlignment {
+  case left
+  case center
+  case right
+  public static func == (a: ThirdParty.HorizontalAlignment, b: ThirdParty.HorizontalAlignment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum VerticalAlignment {
+  case top
+  case center
+  case bottom
+  public static func == (a: ThirdParty.VerticalAlignment, b: ThirdParty.VerticalAlignment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension CoreFoundation.CGPoint {
+  public func bma_offsetBy(dx: CoreFoundation.CGFloat, dy: CoreFoundation.CGFloat) -> CoreFoundation.CGPoint
+}
+@frozen public struct ntp_time32_t {
+  public var whole: Swift.UInt16
+  public var fraction: Swift.UInt16
+  public init()
+  public init(whole: Swift.UInt16, fraction: Swift.UInt16)
+}
+@frozen public struct ntp_time64_t {
+  public var whole: Swift.UInt32
+  public var fraction: Swift.UInt32
+  public init()
+  public init(whole: Swift.UInt32, fraction: Swift.UInt32)
+}
+public typealias ntp_time_t = ThirdParty.ntp_time64_t
+@frozen public struct ntp_packet_t {
+  private var clientModeAndVersionLeap: Swift.UInt8
+  public var client_mode: Swift.UInt8 {
+    get
+    set
+  }
+  public var version_number: Swift.UInt8 {
+    get
+    set
+  }
+  public var leap_indicator: Swift.UInt8 {
+    get
+    set
+  }
+  public var stratum: Swift.UInt8
+  public var poll: Swift.UInt8
+  public var precision: Swift.UInt8
+  public var root_delay: ThirdParty.ntp_time32_t
+  public var root_dispersion: ThirdParty.ntp_time32_t
+  public var reference_id: (Swift.UInt8, Swift.UInt8, Swift.UInt8, Swift.UInt8)
+  public var reference_time: ThirdParty.ntp_time_t
+  public var originate_time: ThirdParty.ntp_time_t
+  public var receive_time: ThirdParty.ntp_time_t
+  public var transmit_time: ThirdParty.ntp_time_t
+  public init()
+  public init(client_mode: Swift.UInt8, version_number: Swift.UInt8, leap_indicator: Swift.UInt8, stratum: Swift.UInt8, poll: Swift.UInt8, precision: Swift.UInt8, root_delay: ThirdParty.ntp_time32_t, root_dispersion: ThirdParty.ntp_time32_t, reference_id: (Swift.UInt8, Swift.UInt8, Swift.UInt8, Swift.UInt8), reference_time: ThirdParty.ntp_time_t, originate_time: ThirdParty.ntp_time_t, receive_time: ThirdParty.ntp_time_t, transmit_time: ThirdParty.ntp_time_t)
+}
+public protocol HashableRepresentible {
+  var asHashable: Swift.AnyHashable { get }
+}
+extension ThirdParty.HashableRepresentible where Self : Swift.Hashable {
+  public var asHashable: Swift.AnyHashable {
+    get
+  }
+}
+public protocol BaseMessageCollectionViewCellStyleProtocol {
+  func avatarSize(viewModel: any ThirdParty.MessageViewModelProtocol) -> CoreFoundation.CGSize
+  func avatarVerticalAlignment(viewModel: any ThirdParty.MessageViewModelProtocol) -> ThirdParty.VerticalAlignment
+  var failedIcon: UIKit.UIImage { get }
+  var failedIconHighlighted: UIKit.UIImage { get }
+  var selectionIndicatorMargins: UIKit.UIEdgeInsets { get }
+  func selectionIndicatorIcon(for viewModel: any ThirdParty.MessageViewModelProtocol) -> UIKit.UIImage
+  func attributedStringForDate(_ date: Swift.String) -> Foundation.NSAttributedString
+  func layoutConstants(viewModel: any ThirdParty.MessageViewModelProtocol) -> ThirdParty.BaseMessageCollectionViewCellLayoutConstants
+}
+public struct BaseMessageCollectionViewCellLayoutConstants {
+  public let horizontalMargin: CoreFoundation.CGFloat
+  public let horizontalInterspacing: CoreFoundation.CGFloat
+  public let horizontalTimestampMargin: CoreFoundation.CGFloat
+  public let maxContainerWidthPercentageForBubbleView: CoreFoundation.CGFloat
+  public init(horizontalMargin: CoreFoundation.CGFloat, horizontalInterspacing: CoreFoundation.CGFloat, horizontalTimestampMargin: CoreFoundation.CGFloat, maxContainerWidthPercentageForBubbleView: CoreFoundation.CGFloat)
+}
+@_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class BaseMessageCollectionViewCell<BubbleViewType> : UIKit.UICollectionViewCell, ThirdParty.BackgroundSizingQueryable, Chatto.AccessoryViewRevealable, UIKit.UIGestureRecognizerDelegate where BubbleViewType : UIKit.UIView, BubbleViewType : ThirdParty.BackgroundSizingQueryable, BubbleViewType : ThirdParty.MaximumLayoutWidthSpecificable {
+  @_Concurrency.MainActor(unsafe) public var animationDuration: Swift.Double
+  @_Concurrency.MainActor(unsafe) open var viewContext: ThirdParty.ViewContext
+  @_Concurrency.MainActor(unsafe) public var isUpdating: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open func performBatchUpdates(_ updateClosure: @escaping () -> Swift.Void, animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) open var messageViewModel: (any ThirdParty.MessageViewModelProtocol)! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var baseStyle: (any ThirdParty.BaseMessageCollectionViewCellStyleProtocol)! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var canCalculateSizeInBackground: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var bubbleView: BubbleViewType! {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open func createBubbleView() -> BubbleViewType!
+  @_Concurrency.MainActor(unsafe) public var avatarView: UIKit.UIImageView! {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public var tapGestureRecognizer: UIKit.UITapGestureRecognizer {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var longPressGestureRecognizer: UIKit.UILongPressGestureRecognizer {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var avatarTapGestureRecognizer: UIKit.UITapGestureRecognizer {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc open func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldReceive touch: UIKit.UITouch) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc open func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepareForReuse()
+  @_Concurrency.MainActor(unsafe) public var failedButton: UIKit.UIButton {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) public var allowAccessoryViewRevealing: Swift.Bool
+  @_Concurrency.MainActor(unsafe) open func preferredOffsetToRevealAccessoryView() -> CoreFoundation.CGFloat?
+  @_Concurrency.MainActor(unsafe) open func revealAccessoryView(withOffset offset: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public var onSelection: ((_ cell: ThirdParty.BaseMessageCollectionViewCell<BubbleViewType>) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) public var onFailedButtonTapped: ((_ cell: ThirdParty.BaseMessageCollectionViewCell<BubbleViewType>) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) public var onAvatarTapped: ((_ cell: ThirdParty.BaseMessageCollectionViewCell<BubbleViewType>) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) public var onBubbleTapped: ((_ cell: ThirdParty.BaseMessageCollectionViewCell<BubbleViewType>) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) public var onBubbleLongPressBegan: ((_ cell: ThirdParty.BaseMessageCollectionViewCell<BubbleViewType>) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) public var onBubbleLongPressEnded: ((_ cell: ThirdParty.BaseMessageCollectionViewCell<BubbleViewType>) -> Swift.Void)?
+  @objc deinit
+}
+@objc public class BasicChatInputBarPresenter : ObjectiveC.NSObject {
+  final public let chatInputBar: ThirdParty.ChatInputBar
+  public init(chatInputBar: ThirdParty.ChatInputBar, chatInputItems: [any ThirdParty.ChatInputItemProtocol], chatInputBarAppearance: ThirdParty.ChatInputBarAppearance, notificationCenter: Foundation.NotificationCenter = NotificationCenter.default)
+  @objc deinit
+}
+extension ThirdParty.BasicChatInputBarPresenter {
+  public func onDidEndEditing()
+  public func onDidBeginEditing()
+}
+public protocol ImagePickerDelegate : AnyObject {
+  func imagePickerDidFinish(_ picker: any ThirdParty.ImagePicker, mediaInfo: [UIKit.UIImagePickerController.InfoKey : Any])
+  func imagePickerDidCancel(_ picker: any ThirdParty.ImagePicker)
+}
+public protocol ImagePicker : AnyObject {
+  var controller: UIKit.UIViewController { get }
+}
+public protocol ImagePickerFactory : AnyObject {
+  func makeImagePicker(delegate: any ThirdParty.ImagePickerDelegate) -> (any ThirdParty.ImagePicker)?
+}
+public struct ImagePickerStore {
+  public static var factory: any ThirdParty.ImagePickerFactory
+}
+public struct PhotosInputViewAppearance {
+  public var liveCameraCellAppearence: ThirdParty.LiveCameraCellAppearance
+  public init(liveCameraCellAppearence: ThirdParty.LiveCameraCellAppearance)
+}
+public protocol PhotosInputViewProtocol {
+  var delegate: (any ThirdParty.PhotosInputViewDelegate)? { get set }
+  var presentingController: UIKit.UIViewController? { get }
+}
+public enum PhotosInputViewPhotoSource {
+  case camera
+  case gallery
+  public static func == (a: ThirdParty.PhotosInputViewPhotoSource, b: ThirdParty.PhotosInputViewPhotoSource) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol PhotosInputViewDelegate : AnyObject {
+  func inputView(_ inputView: any ThirdParty.PhotosInputViewProtocol, didSelectImage image: UIKit.UIImage, source: ThirdParty.PhotosInputViewPhotoSource)
+  func inputViewDidRequestCameraPermission(_ inputView: any ThirdParty.PhotosInputViewProtocol)
+  func inputViewDidRequestPhotoLibraryPermission(_ inputView: any ThirdParty.PhotosInputViewProtocol)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class PhotosInputView : UIKit.UIView, ThirdParty.PhotosInputViewProtocol {
+  @_Concurrency.MainActor(unsafe) weak final public var delegate: (any ThirdParty.PhotosInputViewDelegate)?
+  @_Concurrency.MainActor(unsafe) final public var presentingControllerProvider: () -> UIKit.UIViewController?
+  @_Concurrency.MainActor(unsafe) final public var presentingController: UIKit.UIViewController? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public init(presentingControllerProvider: @escaping () -> UIKit.UIViewController?, appearance: ThirdParty.PhotosInputViewAppearance)
+  @_Concurrency.MainActor(unsafe) convenience public init(presentingController: UIKit.UIViewController?, appearance: ThirdParty.PhotosInputViewAppearance)
+  @objc deinit
+}
+extension ThirdParty.PhotosInputView : UIKit.UICollectionViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+extension ThirdParty.PhotosInputView : UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, didEndDisplaying cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
+}
+open class TextChatInputItem {
+  public var textInputHandler: ((Swift.String) -> Swift.Void)?
+  public init(tabInputButtonAppearance: ThirdParty.TabInputButtonAppearance = TextChatInputItem.createDefaultButtonAppearance())
+  public static func createDefaultButtonAppearance() -> ThirdParty.TabInputButtonAppearance
+  open var selected: Swift.Bool {
+    get
+    set
+  }
+  @objc deinit
+}
+extension ThirdParty.TextChatInputItem : ThirdParty.ChatInputItemProtocol {
+  public var supportsExpandableState: Swift.Bool {
+    get
+  }
+  public var expandedStateTopMargin: CoreFoundation.CGFloat {
+    get
+  }
+  public var presentationMode: ThirdParty.ChatInputItemPresentationMode {
+    get
+  }
+  public var showsSendButton: Swift.Bool {
+    get
+  }
+  public var inputView: UIKit.UIView? {
+    get
+  }
+  public var tabView: UIKit.UIView {
+    get
+  }
+  public func handleInput(_ input: Swift.AnyObject)
+}
+public struct BaseMessageDecorationAttributes {
+  public var canShowFailedIcon: Swift.Bool
+  public let isShowingTail: Swift.Bool
+  public let isShowingAvatar: Swift.Bool
+  public let isShowingSelectionIndicator: Swift.Bool
+  public let isSelected: Swift.Bool
+  public init(canShowFailedIcon: Swift.Bool = true, isShowingTail: Swift.Bool = false, isShowingAvatar: Swift.Bool = false, isShowingSelectionIndicator: Swift.Bool = false, isSelected: Swift.Bool = false)
+}
+public struct ChatItemDecorationAttributes : Chatto.ChatItemDecorationAttributesProtocol {
+  public let bottomMargin: CoreFoundation.CGFloat
+  public let messageDecorationAttributes: ThirdParty.BaseMessageDecorationAttributes
+  public init(bottomMargin: CoreFoundation.CGFloat, messageDecorationAttributes: ThirdParty.BaseMessageDecorationAttributes)
+  @available(*, deprecated)
+  public init(bottomMargin: CoreFoundation.CGFloat, canShowTail: Swift.Bool, canShowAvatar: Swift.Bool, canShowFailedIcon: Swift.Bool, isShowingSelectionIndicator: Swift.Bool = false, isSelected: Swift.Bool = false)
+}
+public protocol ChatInputBarDelegate : AnyObject {
+  func inputBarShouldBeginTextEditing(_ inputBar: ThirdParty.ChatInputBar) -> Swift.Bool
+  func inputBarDidBeginEditing(_ inputBar: ThirdParty.ChatInputBar)
+  func inputBarDidEndEditing(_ inputBar: ThirdParty.ChatInputBar)
+  func inputBarDidChangeText(_ inputBar: ThirdParty.ChatInputBar)
+  func inputBarSendButtonPressed(_ inputBar: ThirdParty.ChatInputBar)
+  func inputBar(_ inputBar: ThirdParty.ChatInputBar, shouldFocusOnItem item: any ThirdParty.ChatInputItemProtocol) -> Swift.Bool
+  func inputBar(_ inputBar: ThirdParty.ChatInputBar, didReceiveFocusOnItem item: any ThirdParty.ChatInputItemProtocol)
+  func inputBarDidShowPlaceholder(_ inputBar: ThirdParty.ChatInputBar)
+  func inputBarDidHidePlaceholder(_ inputBar: ThirdParty.ChatInputBar)
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) open class ChatInputBar : ThirdParty.ReusableXibView {
+  @_Concurrency.MainActor(unsafe) public var pasteActionInterceptor: (any ThirdParty.PasteActionInterceptor)? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any ThirdParty.ChatInputBarDelegate)?
+  @_Concurrency.MainActor(unsafe) public var shouldEnableSendButton: (_ inputBar: ThirdParty.ChatInputBar) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) open class func loadNib() -> ThirdParty.ChatInputBar
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func updateConstraints()
+  @_Concurrency.MainActor(unsafe) open var showsTextView: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var showsSendButton: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var maxCharactersCount: Swift.UInt?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func becomeFirstResponderWithInputView(_ inputView: UIKit.UIView?)
+  @_Concurrency.MainActor(unsafe) public var inputText: Swift.String {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var inputSelectedRange: Foundation.NSRange {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var placeholderText: Swift.String {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public func setTextViewPlaceholderAccessibilityIdentifer(_ accessibilityIdentifer: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension ThirdParty.ChatInputBar {
+  @_Concurrency.MainActor(unsafe) public func focusOnInputItem(_ inputItem: any ThirdParty.ChatInputItemProtocol)
+}
+extension ThirdParty.ChatInputBar {
+  @_Concurrency.MainActor(unsafe) public func setAppearance(_ appearance: ThirdParty.ChatInputBarAppearance)
+}
+extension ThirdParty.ChatInputBar {
+  @_Concurrency.MainActor(unsafe) public var tabBarInterItemSpacing: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var tabBarContentInsets: UIKit.UIEdgeInsets {
+    get
+    set
+  }
+}
+extension ThirdParty.ChatInputBar : UIKit.UITextViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textViewShouldBeginEditing(_ textView: UIKit.UITextView) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textViewDidEndEditing(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textViewDidBeginEditing(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textViewDidChange(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textView(_ textView: UIKit.UITextView, shouldChangeTextIn nsRange: Foundation.NSRange, replacementText text: Swift.String) -> Swift.Bool
+}
+extension ThirdParty.ChatInputBar : ThirdParty.ExpandableTextViewPlaceholderDelegate {
+  @_Concurrency.MainActor(unsafe) public func expandableTextViewDidShowPlaceholder(_ textView: ThirdParty.ExpandableTextView)
+  @_Concurrency.MainActor(unsafe) public func expandableTextViewDidHidePlaceholder(_ textView: ThirdParty.ExpandableTextView)
+}
+public protocol TextBubbleViewStyleProtocol {
+  func bubbleImage(viewModel: any ThirdParty.TextMessageViewModelProtocol, isSelected: Swift.Bool) -> UIKit.UIImage
+  func bubbleImageBorder(viewModel: any ThirdParty.TextMessageViewModelProtocol, isSelected: Swift.Bool) -> UIKit.UIImage?
+  func textFont(viewModel: any ThirdParty.TextMessageViewModelProtocol, isSelected: Swift.Bool) -> UIKit.UIFont
+  func textColor(viewModel: any ThirdParty.TextMessageViewModelProtocol, isSelected: Swift.Bool) -> UIKit.UIColor
+  func textInsets(viewModel: any ThirdParty.TextMessageViewModelProtocol, isSelected: Swift.Bool) -> UIKit.UIEdgeInsets
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class TextBubbleView : UIKit.UIView, ThirdParty.MaximumLayoutWidthSpecificable, ThirdParty.BackgroundSizingQueryable {
+  @_Concurrency.MainActor(unsafe) final public var preferredMaxLayoutWidth: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) final public var animationDuration: Swift.Double
+  @_Concurrency.MainActor(unsafe) final public var viewContext: ThirdParty.ViewContext {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var style: (any ThirdParty.TextBubbleViewStyleProtocol)! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var textMessageViewModel: (any ThirdParty.TextMessageViewModelProtocol)! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var selected: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) final public var isUpdating: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) final public func performBatchUpdates(_ updateClosure: @escaping () -> Swift.Void, animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) @objc override final public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override final public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) final public var layoutCache: Foundation.NSCache<Swift.AnyObject, Swift.AnyObject>!
+  @_Concurrency.MainActor(unsafe) final public var canCalculateSizeInBackground: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+public enum ViewContext {
+  case normal
+  case sizing
+  public static func == (a: ThirdParty.ViewContext, b: ThirdParty.ViewContext) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol MaximumLayoutWidthSpecificable {
+  var preferredMaxLayoutWidth: CoreFoundation.CGFloat { get set }
+}
+public protocol BackgroundSizingQueryable {
+  var canCalculateSizeInBackground: Swift.Bool { get }
+}
+public struct ChatInputBarAppearance {
+  public struct SendButtonAppearance {
+    public var font: UIKit.UIFont
+    public var insets: UIKit.UIEdgeInsets
+    public var title: Swift.String
+    public var titleColors: [ThirdParty.UIControlStateWrapper : UIKit.UIColor]
+    public let accessibilityIdentifier: Swift.String
+  }
+  public struct TabBarAppearance {
+    public var interItemSpacing: CoreFoundation.CGFloat
+    public var height: CoreFoundation.CGFloat
+    public var contentInsets: UIKit.UIEdgeInsets
+  }
+  public struct TextInputAppearance {
+    public var font: UIKit.UIFont
+    public var textColor: UIKit.UIColor
+    public var tintColor: UIKit.UIColor?
+    public var borderColor: UIKit.UIColor
+    public var borderWidth: CoreFoundation.CGFloat
+    public var placeholderFont: UIKit.UIFont
+    public var placeholderColor: UIKit.UIColor
+    public var placeholderText: Swift.String
+    public var textInsets: UIKit.UIEdgeInsets
+    public let accessibilityIdentifier: Swift.String
+  }
+  public var sendButtonAppearance: ThirdParty.ChatInputBarAppearance.SendButtonAppearance
+  public var tabBarAppearance: ThirdParty.ChatInputBarAppearance.TabBarAppearance
+  public var textInputAppearance: ThirdParty.ChatInputBarAppearance.TextInputAppearance
+  public init()
+}
+public struct UIControlStateWrapper : Swift.Hashable {
+  public let controlState: UIKit.UIControl.State
+  public init(state: UIKit.UIControl.State)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public func == (lhs: ThirdParty.UIControlStateWrapper, rhs: ThirdParty.UIControlStateWrapper) -> Swift.Bool
+@available(iOS 11, *)
+final public class CompoundMessagePresenter<ViewModelBuilderT, InteractionHandlerT> : ThirdParty.BaseMessagePresenter<ThirdParty.CompoundBubbleView, ViewModelBuilderT, InteractionHandlerT> where ViewModelBuilderT : ThirdParty.ViewModelBuilderProtocol, InteractionHandlerT : ThirdParty.BaseMessageInteractionHandlerProtocol, ViewModelBuilderT.ModelT : Swift.Equatable, ViewModelBuilderT.ViewModelT == InteractionHandlerT.ViewModelT {
+  public typealias ModelT = ViewModelBuilderT.ModelT
+  public typealias ViewModelT = ViewModelBuilderT.ViewModelT
+  final public let compoundCellStyle: any ThirdParty.CompoundBubbleViewStyleProtocol
+  public init(messageModel: ThirdParty.CompoundMessagePresenter<ViewModelBuilderT, InteractionHandlerT>.ModelT, viewModelBuilder: ViewModelBuilderT, interactionHandler: InteractionHandlerT?, contentFactories: [ThirdParty.AnyMessageContentFactory<ThirdParty.CompoundMessagePresenter<ViewModelBuilderT, InteractionHandlerT>.ModelT>], sizingCell: ThirdParty.CompoundMessageCollectionViewCell<ThirdParty.CompoundMessagePresenter<ViewModelBuilderT, InteractionHandlerT>.ModelT>, baseCellStyle: any ThirdParty.BaseMessageCollectionViewCellStyleProtocol, compoundCellStyle: any ThirdParty.CompoundBubbleViewStyleProtocol, cache: ThirdParty.Cache<ThirdParty.CompoundBubbleLayoutProvider.Configuration, ThirdParty.CompoundBubbleLayoutProvider>, accessibilityIdentifier: Swift.String?, menuPresenter: (any Chatto.ChatItemMenuPresenterProtocol)?)
+  override final public var canCalculateHeightInBackground: Swift.Bool {
+    get
+  }
+  override final public class func registerCells(_ collectionView: UIKit.UICollectionView)
+  override final public func dequeueCell(collectionView: UIKit.UICollectionView, indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  override final public func heightForCell(maximumWidth width: CoreFoundation.CGFloat, decorationAttributes: (any Chatto.ChatItemDecorationAttributesProtocol)?) -> CoreFoundation.CGFloat
+  override final public func configureCell(_ cell: ThirdParty.BaseMessageCollectionViewCell<ThirdParty.CompoundBubbleView>, decorationAttributes: ThirdParty.ChatItemDecorationAttributes, animated: Swift.Bool, additionalConfiguration: (() -> Swift.Void)?)
+  override final public func canShowMenu() -> Swift.Bool
+  override final public func canPerformMenuControllerAction(_ action: ObjectiveC.Selector) -> Swift.Bool
+  override final public func performMenuControllerAction(_ action: ObjectiveC.Selector)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) open class ReusableXibView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeAfter(using aDecoder: Foundation.NSCoder) -> Any?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol CompoundBubbleViewStyleProtocol {
+  typealias ViewModel = ThirdParty.MessageViewModelProtocol
+  func backgroundColor(forViewModel viewModel: any ThirdParty.MessageViewModelProtocol) -> UIKit.UIColor
+  func maskingImage(forViewModel viewModel: any ThirdParty.MessageViewModelProtocol) -> UIKit.UIImage
+  func borderImage(forViewModel viewModel: any ThirdParty.MessageViewModelProtocol) -> UIKit.UIImage
+  func tailWidth(forViewModel viewModel: any ThirdParty.MessageViewModelProtocol) -> CoreFoundation.CGFloat
+}
+final public class DefaultCompoundBubbleViewStyle : ThirdParty.CompoundBubbleViewStyleProtocol {
+  public struct BubbleMasks {
+    public let incomingTail: () -> UIKit.UIImage
+    public let incomingNoTail: () -> UIKit.UIImage
+    public let outgoingTail: () -> UIKit.UIImage
+    public let outgoingNoTail: () -> UIKit.UIImage
+    public let tailWidth: CoreFoundation.CGFloat
+    public init(incomingTail: @autoclosure @escaping () -> UIKit.UIImage, incomingNoTail: @autoclosure @escaping () -> UIKit.UIImage, outgoingTail: @autoclosure @escaping () -> UIKit.UIImage, outgoingNoTail: @autoclosure @escaping () -> UIKit.UIImage, tailWidth: CoreFoundation.CGFloat)
+  }
+  public init(baseStyle: ThirdParty.BaseMessageCollectionViewCellDefaultStyle = BaseMessageCollectionViewCellDefaultStyle(), bubbleMasks: ThirdParty.DefaultCompoundBubbleViewStyle.BubbleMasks = .default)
+  final public func backgroundColor(forViewModel viewModel: any ThirdParty.MessageViewModelProtocol) -> UIKit.UIColor
+  final public func maskingImage(forViewModel viewModel: any ThirdParty.MessageViewModelProtocol) -> UIKit.UIImage
+  final public func borderImage(forViewModel viewModel: any ThirdParty.MessageViewModelProtocol) -> UIKit.UIImage
+  final public func tailWidth(forViewModel _: any ThirdParty.MessageViewModelProtocol) -> CoreFoundation.CGFloat
+  @objc deinit
+}
+extension ThirdParty.DefaultCompoundBubbleViewStyle.BubbleMasks {
+  public static var `default`: ThirdParty.DefaultCompoundBubbleViewStyle.BubbleMasks {
+    get
+  }
+}
+public enum MessageStatus {
+  case failed
+  case sending
+  case success
+  public static func == (a: ThirdParty.MessageStatus, b: ThirdParty.MessageStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol MessageModelProtocol : Chatto.ChatItemProtocol {
+  var senderId: Swift.String { get }
+  var isIncoming: Swift.Bool { get }
+  var date: Foundation.Date { get }
+  var status: ThirdParty.MessageStatus { get }
+}
+public protocol DecoratedMessageModelProtocol : ThirdParty.MessageModelProtocol {
+  var messageModel: any ThirdParty.MessageModelProtocol { get }
+}
+extension ThirdParty.DecoratedMessageModelProtocol {
+  public var uid: Swift.String {
+    get
+  }
+  public var senderId: Swift.String {
+    get
+  }
+  public var type: Swift.String {
+    get
+  }
+  public var isIncoming: Swift.Bool {
+    get
+  }
+  public var date: Foundation.Date {
+    get
+  }
+  public var status: ThirdParty.MessageStatus {
+    get
+  }
+}
+open class MessageModel : ThirdParty.MessageModelProtocol {
+  open var uid: Swift.String
+  open var senderId: Swift.String
+  open var type: Swift.String
+  open var isIncoming: Swift.Bool
+  open var date: Foundation.Date
+  open var status: ThirdParty.MessageStatus
+  public init(uid: Swift.String, senderId: Swift.String, type: Swift.String, isIncoming: Swift.Bool, date: Foundation.Date, status: ThirdParty.MessageStatus)
+  @objc deinit
+}
+public protocol PhotoBubbleViewStyleProtocol {
+  func maskingImage(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> UIKit.UIImage
+  func borderImage(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> UIKit.UIImage?
+  func placeholderBackgroundImage(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> UIKit.UIImage
+  func placeholderIconImage(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> UIKit.UIImage
+  func placeholderIconTintColor(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> UIKit.UIColor
+  func tailWidth(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> CoreFoundation.CGFloat
+  func bubbleSize(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> CoreFoundation.CGSize
+  func progressIndicatorColor(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> UIKit.UIColor
+  func overlayColor(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> UIKit.UIColor?
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class PhotoBubbleView : UIKit.UIView, ThirdParty.MaximumLayoutWidthSpecificable, ThirdParty.BackgroundSizingQueryable {
+  @_Concurrency.MainActor(unsafe) public var viewContext: ThirdParty.ViewContext
+  @_Concurrency.MainActor(unsafe) public var animationDuration: Swift.Double
+  @_Concurrency.MainActor(unsafe) public var preferredMaxLayoutWidth: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public var imageView: UIKit.UIImageView {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var progressIndicatorView: ThirdParty.CircleProgressIndicatorView {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var photoMessageViewModel: (any ThirdParty.PhotoMessageViewModelProtocol)! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var photoMessageStyle: (any ThirdParty.PhotoBubbleViewStyleProtocol)! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var isUpdating: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func performBatchUpdates(_ updateClosure: @escaping () -> Swift.Void, animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) open func updateViews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open var canCalculateSizeInBackground: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class CircleProgressIndicatorView : UIKit.UIView {
+  public enum ProgressType {
+    case undefined
+    case icon
+    case timer
+    case upload
+    case download
+    public static func == (a: ThirdParty.CircleProgressIndicatorView.ProgressType, b: ThirdParty.CircleProgressIndicatorView.ProgressType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum ProgressStatus {
+    case undefined
+    case starting
+    case inProgress
+    case completed
+    case failed
+    public static func == (a: ThirdParty.CircleProgressIndicatorView.ProgressStatus, b: ThirdParty.CircleProgressIndicatorView.ProgressStatus) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) final public var progressType: ThirdParty.CircleProgressIndicatorView.ProgressType {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) final public var progressStatus: ThirdParty.CircleProgressIndicatorView.ProgressStatus {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var progressLineColor: UIKit.UIColor! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var progressLineWidth: CoreFoundation.CGFloat! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var tapHandler: (() -> Swift.Void)? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var progress: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) final public func setProgress(_ progress: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) final public func setTimerTitle(_ title: Foundation.NSAttributedString?)
+  @_Concurrency.MainActor(unsafe) final public func setTextTitle(_ title: Foundation.NSAttributedString?)
+  @_Concurrency.MainActor(unsafe) final public func setIconType(_ type: ThirdParty.CircleIconType)
+  @_Concurrency.MainActor(unsafe) @objc override final public func layoutSubviews()
+  @objc deinit
+}
+extension ThirdParty.CircleProgressIndicatorView {
+  @_Concurrency.MainActor(unsafe) convenience public init(size: CoreFoundation.CGSize)
+  @_Concurrency.MainActor(unsafe) public static func `default`() -> ThirdParty.CircleProgressIndicatorView
+}
+extension QuartzCore.CABasicAnimation {
+  public class func bma_fadeInAnimationWithDuration(_ duration: CoreFoundation.CFTimeInterval) -> QuartzCore.CABasicAnimation
+}
+extension UIKit.UIScreen {
+  @_Concurrency.MainActor(unsafe) public var defaultKeyboardHeightForCurrentOrientation: CoreFoundation.CGFloat {
+    get
+  }
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var bma_rect: CoreFoundation.CGRect {
+    get
+    set
+  }
+}
+public struct LiveCameraCellAppearance {
+  public var backgroundColor: UIKit.UIColor
+  public var cameraImageProvider: () -> UIKit.UIImage?
+  public var cameraLockImageProvider: () -> UIKit.UIImage?
+  public let accessibilityIdentifier: Swift.String
+  public init(backgroundColor: UIKit.UIColor, cameraImage: @autoclosure @escaping () -> UIKit.UIImage?, cameraLockImage: @autoclosure @escaping () -> UIKit.UIImage?)
+  public static func createDefaultAppearance() -> ThirdParty.LiveCameraCellAppearance
+}
+final public class TextMessageMenuItemPresenter : Chatto.ChatItemMenuPresenterProtocol {
+  public init(pasteboard: UIKit.UIPasteboard = .general, textProvider: @escaping () -> Swift.String)
+  final public func shouldShowMenu() -> Swift.Bool
+  final public func canPerformMenuControllerAction(_ action: ObjectiveC.Selector) -> Swift.Bool
+  final public func performMenuControllerAction(_ action: ObjectiveC.Selector)
+  @objc deinit
+}
+public typealias TextMessageCollectionViewCellStyleProtocol = ThirdParty.TextBubbleViewStyleProtocol
+@_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class TextMessageCollectionViewCell : ThirdParty.BaseMessageCollectionViewCell<ThirdParty.TextBubbleView> {
+  @_Concurrency.MainActor(unsafe) public static func sizingCell() -> ThirdParty.TextMessageCollectionViewCell
+  @_Concurrency.MainActor(unsafe) override final public func createBubbleView() -> ThirdParty.TextBubbleView
+  @_Concurrency.MainActor(unsafe) override final public func performBatchUpdates(_ updateClosure: @escaping () -> Swift.Void, animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) override final public var viewContext: ThirdParty.ViewContext {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var textMessageViewModel: (any ThirdParty.TextMessageViewModelProtocol)! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var textMessageStyle: (any ThirdParty.TextBubbleViewStyleProtocol)! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) final public var layoutCache: Foundation.NSCache<Swift.AnyObject, Swift.AnyObject>! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+final public class MessageContentModule {
+  public typealias Presenter = Any
+  final public let view: UIKit.UIView
+  final public let showBorder: Swift.Bool
+  final public let presenter: Any
+  public init(view: UIKit.UIView, presenter: Any, showBorder: Swift.Bool = false)
+  @objc deinit
+}
+public protocol MessageContentFactoryProtocol {
+  associatedtype Model
+  func canCreateMessageModule(forModel model: Self.Model) -> Swift.Bool
+  func createMessageModule(forModel model: Self.Model) -> ThirdParty.MessageContentModule
+  func createLayoutProvider(forModel model: Self.Model) -> any ThirdParty.MessageManualLayoutProviderProtocol
+}
+final public class AnyMessageContentFactory<Model> : ThirdParty.MessageContentFactoryProtocol {
+  public init<U>(_ base: U) where Model == U.Model, U : ThirdParty.MessageContentFactoryProtocol
+  final public func canCreateMessageModule(forModel model: Model) -> Swift.Bool
+  final public func createMessageModule(forModel model: Model) -> ThirdParty.MessageContentModule
+  final public func createLayoutProvider(forModel model: Model) -> any ThirdParty.MessageManualLayoutProviderProtocol
+  @objc deinit
+}
+@objc public class ExpandableChatInputBarPresenter : ObjectiveC.NSObject {
+  final public let chatInputBar: ThirdParty.ChatInputBar
+  public init(inputPositionController: any Chatto.InputPositionControlling, chatInputBar: ThirdParty.ChatInputBar, chatInputItems: [any ThirdParty.ChatInputItemProtocol], chatInputBarAppearance: ThirdParty.ChatInputBarAppearance, notificationCenter: Foundation.NotificationCenter = NotificationCenter.default)
+  @objc deinit
+}
+extension ThirdParty.ExpandableChatInputBarPresenter {
+  public func onDidEndEditing()
+  public func onDidBeginEditing()
+}
+extension ThirdParty.ExpandableChatInputBarPresenter : Chatto.KeyboardEventsHandling {
+  public func onKeyboardStateDidChange(_ height: CoreFoundation.CGFloat, _ status: Chatto.KeyboardStatus)
+}
+extension ThirdParty.ExpandableChatInputBarPresenter : Chatto.ScrollViewEventsHandling {
+  public func onScrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  public func onScrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, _ decelerate: Swift.Bool)
+}
+open class PhotosChatInputItem : ThirdParty.ChatInputItemProtocol {
+  public var supportsExpandableState: Swift.Bool {
+    get
+  }
+  public var expandedStateTopMargin: CoreFoundation.CGFloat {
+    get
+  }
+  public var photoInputHandler: ((UIKit.UIImage, ThirdParty.PhotosInputViewPhotoSource) -> Swift.Void)?
+  public var cameraPermissionHandler: (() -> Swift.Void)?
+  public var photosPermissionHandler: (() -> Swift.Void)?
+  weak public var presentingController: UIKit.UIViewController?
+  public init(presentingController: UIKit.UIViewController?, tabInputButtonAppearance: ThirdParty.TabInputButtonAppearance = PhotosChatInputItem.createDefaultButtonAppearance(), inputViewAppearance: ThirdParty.PhotosInputViewAppearance = PhotosChatInputItem.createDefaultInputViewAppearance())
+  public static func createDefaultButtonAppearance() -> ThirdParty.TabInputButtonAppearance
+  public static func createDefaultInputViewAppearance() -> ThirdParty.PhotosInputViewAppearance
+  open var selected: Swift.Bool {
+    get
+    set
+  }
+  open var presentationMode: ThirdParty.ChatInputItemPresentationMode {
+    get
+  }
+  open var showsSendButton: Swift.Bool {
+    get
+  }
+  open var inputView: UIKit.UIView? {
+    get
+  }
+  open var tabView: UIKit.UIView {
+    get
+  }
+  open func handleInput(_ input: Swift.AnyObject)
+  @objc deinit
+}
+extension ThirdParty.PhotosChatInputItem : ThirdParty.PhotosInputViewDelegate {
+  public func inputView(_ inputView: any ThirdParty.PhotosInputViewProtocol, didSelectImage image: UIKit.UIImage, source: ThirdParty.PhotosInputViewPhotoSource)
+  public func inputViewDidRequestCameraPermission(_ inputView: any ThirdParty.PhotosInputViewProtocol)
+  public func inputViewDidRequestPhotoLibraryPermission(_ inputView: any ThirdParty.PhotosInputViewProtocol)
+}
+public struct LiveCameraSettings {
+  public let cameraPosition: AVFoundation.AVCaptureDevice.Position
+  public init(cameraPosition: AVFoundation.AVCaptureDevice.Position)
+  public static func makeDefaultSettings() -> ThirdParty.LiveCameraSettings
+}
+final public class LiveCameraCellPresenter {
+  public typealias AVAuthorizationStatusProvider = () -> AVFoundation.AVAuthorizationStatus
+  public init(cameraSettings: ThirdParty.LiveCameraSettings = LiveCameraSettings.makeDefaultSettings(), cellAppearance: ThirdParty.LiveCameraCellAppearance = LiveCameraCellAppearance.createDefaultAppearance(), authorizationStatusProvider: @escaping ThirdParty.LiveCameraCellPresenter.AVAuthorizationStatusProvider = LiveCameraCellPresenter.createDefaultCameraAuthorizationStatusProvider())
+  @objc deinit
+  public static func createDefaultCameraAuthorizationStatusProvider() -> ThirdParty.LiveCameraCellPresenter.AVAuthorizationStatusProvider
+  public static func registerCells(collectionView: UIKit.UICollectionView)
+  final public func dequeueCell(collectionView: UIKit.UICollectionView, indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  final public func cellWillBeShown(_ cell: UIKit.UICollectionViewCell)
+  final public func cellWasHidden(_ cell: UIKit.UICollectionViewCell)
+}
+public struct TabInputButtonAppearance {
+  public var images: [ThirdParty.UIControlStateWrapper : UIKit.UIImage]
+  public var size: CoreFoundation.CGSize?
+  public init(images: [ThirdParty.UIControlStateWrapper : UIKit.UIImage], size: CoreFoundation.CGSize?)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class TabInputButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) public static func makeInputButton(withAppearance appearance: ThirdParty.TabInputButtonAppearance, accessibilityID: Swift.String? = nil) -> ThirdParty.TabInputButton
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+open class TextMessageCollectionViewCellDefaultStyle : ThirdParty.TextMessageCollectionViewCellStyleProtocol {
+  public struct BubbleImages {
+    public init(incomingTail: @autoclosure @escaping () -> UIKit.UIImage, incomingNoTail: @autoclosure @escaping () -> UIKit.UIImage, outgoingTail: @autoclosure @escaping () -> UIKit.UIImage, outgoingNoTail: @autoclosure @escaping () -> UIKit.UIImage)
+  }
+  public struct TextStyle {
+    public let font: () -> UIKit.UIFont
+    public let incomingColor: () -> UIKit.UIColor
+    public let outgoingColor: () -> UIKit.UIColor
+    public let incomingInsets: UIKit.UIEdgeInsets
+    public let outgoingInsets: UIKit.UIEdgeInsets
+    public init(font: @autoclosure @escaping () -> UIKit.UIFont, incomingColor: @autoclosure @escaping () -> UIKit.UIColor, outgoingColor: @autoclosure @escaping () -> UIKit.UIColor, incomingInsets: UIKit.UIEdgeInsets, outgoingInsets: UIKit.UIEdgeInsets)
+  }
+  final public let bubbleImages: ThirdParty.TextMessageCollectionViewCellDefaultStyle.BubbleImages
+  final public let textStyle: ThirdParty.TextMessageCollectionViewCellDefaultStyle.TextStyle
+  final public let baseStyle: ThirdParty.BaseMessageCollectionViewCellDefaultStyle
+  public init(bubbleImages: ThirdParty.TextMessageCollectionViewCellDefaultStyle.BubbleImages = TextMessageCollectionViewCellDefaultStyle.createDefaultBubbleImages(), textStyle: ThirdParty.TextMessageCollectionViewCellDefaultStyle.TextStyle = TextMessageCollectionViewCellDefaultStyle.createDefaultTextStyle(), baseStyle: ThirdParty.BaseMessageCollectionViewCellDefaultStyle = BaseMessageCollectionViewCellDefaultStyle())
+  open func textFont(viewModel: any ThirdParty.TextMessageViewModelProtocol, isSelected: Swift.Bool) -> UIKit.UIFont
+  open func textColor(viewModel: any ThirdParty.TextMessageViewModelProtocol, isSelected: Swift.Bool) -> UIKit.UIColor
+  open func textInsets(viewModel: any ThirdParty.TextMessageViewModelProtocol, isSelected: Swift.Bool) -> UIKit.UIEdgeInsets
+  open func bubbleImageBorder(viewModel: any ThirdParty.TextMessageViewModelProtocol, isSelected: Swift.Bool) -> UIKit.UIImage?
+  open func bubbleImage(viewModel: any ThirdParty.TextMessageViewModelProtocol, isSelected: Swift.Bool) -> UIKit.UIImage
+  open func createImage(templateImage image: UIKit.UIImage, isIncoming: Swift.Bool, status: ThirdParty.MessageViewModelStatus, isSelected: Swift.Bool) -> UIKit.UIImage
+  @objc deinit
+}
+extension ThirdParty.TextMessageCollectionViewCellDefaultStyle {
+  public static func createDefaultBubbleImages() -> ThirdParty.TextMessageCollectionViewCellDefaultStyle.BubbleImages
+  public static func createDefaultTextStyle() -> ThirdParty.TextMessageCollectionViewCellDefaultStyle.TextStyle
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class HorizontalStackScrollView : UIKit.UIScrollView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func updateConstraints()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+open class PhotoMessagePresenterBuilder<ViewModelBuilderT, InteractionHandlerT> : Chatto.ChatItemPresenterBuilderProtocol where ViewModelBuilderT : ThirdParty.ViewModelBuilderProtocol, InteractionHandlerT : ThirdParty.BaseMessageInteractionHandlerProtocol, ViewModelBuilderT.ViewModelT : ThirdParty.PhotoMessageViewModelProtocol, ViewModelBuilderT.ViewModelT == InteractionHandlerT.ViewModelT {
+  public typealias ModelT = ViewModelBuilderT.ModelT
+  public typealias ViewModelT = ViewModelBuilderT.ViewModelT
+  public init(viewModelBuilder: ViewModelBuilderT, interactionHandler: InteractionHandlerT?)
+  final public let viewModelBuilder: ViewModelBuilderT
+  final public let interactionHandler: InteractionHandlerT?
+  final public let sizingCell: ThirdParty.PhotoMessageCollectionViewCell
+  public var photoCellStyle: any ThirdParty.PhotoBubbleViewStyleProtocol {
+    get
+    set
+  }
+  public var baseCellStyle: any ThirdParty.BaseMessageCollectionViewCellStyleProtocol {
+    get
+    set
+  }
+  open func canHandleChatItem(_ chatItem: any Chatto.ChatItemProtocol) -> Swift.Bool
+  open func createPresenterWithChatItem(_ chatItem: any Chatto.ChatItemProtocol) -> any Chatto.ChatItemPresenterProtocol
+  open var presenterType: any Chatto.ChatItemPresenterProtocol.Type {
+    get
+  }
+  @objc deinit
+}
+extension CoreFoundation.CGSize {
+  public func bma_insetBy(dx: CoreFoundation.CGFloat, dy: CoreFoundation.CGFloat) -> CoreFoundation.CGSize
+  public func bma_outsetBy(dx: CoreFoundation.CGFloat, dy: CoreFoundation.CGFloat) -> CoreFoundation.CGSize
+  public func bma_round(scale: CoreFoundation.CGFloat = UIMainScreenScale) -> CoreFoundation.CGSize
+  public func bma_rect(inContainer containerRect: CoreFoundation.CGRect, xAlignament: ThirdParty.HorizontalAlignment, yAlignment: ThirdParty.VerticalAlignment, dx: CoreFoundation.CGFloat = 0, dy: CoreFoundation.CGFloat = 0) -> CoreFoundation.CGRect
+}
+extension CoreFoundation.CGSize : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @available(iOS 11, *)
+@_Concurrency.MainActor(unsafe) final public class CompoundMessageCollectionViewCell<Configuration> : ThirdParty.BaseMessageCollectionViewCell<ThirdParty.CompoundBubbleView> where Configuration : Swift.Equatable {
+  @_Concurrency.MainActor(unsafe) override final public func createBubbleView() -> ThirdParty.CompoundBubbleView!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+open class PhotoMessageCollectionViewCellDefaultStyle : ThirdParty.PhotoMessageCollectionViewCellStyleProtocol {
+  public struct BubbleMasks {
+    public let incomingTail: () -> UIKit.UIImage
+    public let incomingNoTail: () -> UIKit.UIImage
+    public let outgoingTail: () -> UIKit.UIImage
+    public let outgoingNoTail: () -> UIKit.UIImage
+    public let tailWidth: CoreFoundation.CGFloat
+    public init(incomingTail: @autoclosure @escaping () -> UIKit.UIImage, incomingNoTail: @autoclosure @escaping () -> UIKit.UIImage, outgoingTail: @autoclosure @escaping () -> UIKit.UIImage, outgoingNoTail: @autoclosure @escaping () -> UIKit.UIImage, tailWidth: CoreFoundation.CGFloat)
+  }
+  public struct Sizes {
+    public let aspectRatioIntervalForSquaredSize: Swift.ClosedRange<CoreFoundation.CGFloat>
+    public let photoSizeLandscape: CoreFoundation.CGSize
+    public let photoSizePortrait: CoreFoundation.CGSize
+    public let photoSizeSquare: CoreFoundation.CGSize
+    public init(aspectRatioIntervalForSquaredSize: Swift.ClosedRange<CoreFoundation.CGFloat>, photoSizeLandscape: CoreFoundation.CGSize, photoSizePortrait: CoreFoundation.CGSize, photoSizeSquare: CoreFoundation.CGSize)
+  }
+  public struct Colors {
+    public let placeholderIconTintIncoming: UIKit.UIColor
+    public let placeholderIconTintOutgoing: UIKit.UIColor
+    public let progressIndicatorColorIncoming: UIKit.UIColor
+    public let progressIndicatorColorOutgoing: UIKit.UIColor
+    public let overlayColor: UIKit.UIColor
+    public init(placeholderIconTintIncoming: UIKit.UIColor, placeholderIconTintOutgoing: UIKit.UIColor, progressIndicatorColorIncoming: UIKit.UIColor, progressIndicatorColorOutgoing: UIKit.UIColor, overlayColor: UIKit.UIColor)
+  }
+  public init(bubbleMasks: ThirdParty.PhotoMessageCollectionViewCellDefaultStyle.BubbleMasks = PhotoMessageCollectionViewCellDefaultStyle.createDefaultBubbleMasks(), sizes: ThirdParty.PhotoMessageCollectionViewCellDefaultStyle.Sizes = PhotoMessageCollectionViewCellDefaultStyle.createDefaultSizes(), colors: ThirdParty.PhotoMessageCollectionViewCellDefaultStyle.Colors = PhotoMessageCollectionViewCellDefaultStyle.createDefaultColors(), baseStyle: ThirdParty.BaseMessageCollectionViewCellDefaultStyle = BaseMessageCollectionViewCellDefaultStyle())
+  open func maskingImage(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> UIKit.UIImage
+  open func borderImage(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> UIKit.UIImage?
+  open func placeholderBackgroundImage(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> UIKit.UIImage
+  open func placeholderIconImage(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> UIKit.UIImage
+  open func placeholderIconTintColor(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> UIKit.UIColor
+  open func tailWidth(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> CoreFoundation.CGFloat
+  open func bubbleSize(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> CoreFoundation.CGSize
+  open func progressIndicatorColor(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> UIKit.UIColor
+  open func overlayColor(viewModel: any ThirdParty.PhotoMessageViewModelProtocol) -> UIKit.UIColor?
+  @objc deinit
+}
+extension ThirdParty.PhotoMessageCollectionViewCellDefaultStyle {
+  public static func createDefaultBubbleMasks() -> ThirdParty.PhotoMessageCollectionViewCellDefaultStyle.BubbleMasks
+  public static func createDefaultSizes() -> ThirdParty.PhotoMessageCollectionViewCellDefaultStyle.Sizes
+  public static func createDefaultColors() -> ThirdParty.PhotoMessageCollectionViewCellDefaultStyle.Colors
+}
+public enum TransferDirection {
+  case upload
+  case download
+  public static func == (a: ThirdParty.TransferDirection, b: ThirdParty.TransferDirection) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum TransferStatus {
+  case idle
+  case transfering
+  case failed
+  case success
+  public static func == (a: ThirdParty.TransferStatus, b: ThirdParty.TransferStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol PhotoMessageViewModelProtocol : ThirdParty.DecoratedMessageViewModelProtocol {
+  var transferDirection: ThirdParty.Observable<ThirdParty.TransferDirection> { get set }
+  var transferProgress: ThirdParty.Observable<Swift.Double> { get set }
+  var transferStatus: ThirdParty.Observable<ThirdParty.TransferStatus> { get set }
+  var image: ThirdParty.Observable<UIKit.UIImage?> { get set }
+  var imageSize: CoreFoundation.CGSize { get }
+  var cellAccessibilityIdentifier: Swift.String { get }
+  var bubbleAccessibilityIdentifier: Swift.String { get }
+}
+open class PhotoMessageViewModel<PhotoMessageModelT> : ThirdParty.PhotoMessageViewModelProtocol where PhotoMessageModelT : ThirdParty.PhotoMessageModelProtocol {
+  public var photoMessage: any ThirdParty.PhotoMessageModelProtocol {
+    get
+  }
+  final public let _photoMessage: PhotoMessageModelT
+  public var transferStatus: ThirdParty.Observable<ThirdParty.TransferStatus>
+  public var transferProgress: ThirdParty.Observable<Swift.Double>
+  public var transferDirection: ThirdParty.Observable<ThirdParty.TransferDirection>
+  public var image: ThirdParty.Observable<UIKit.UIImage?>
+  open var imageSize: CoreFoundation.CGSize {
+    get
+  }
+  final public let cellAccessibilityIdentifier: Swift.String
+  final public let bubbleAccessibilityIdentifier: Swift.String
+  final public let messageViewModel: any ThirdParty.MessageViewModelProtocol
+  open var isShowingFailedIcon: Swift.Bool {
+    get
+  }
+  public init(photoMessage: PhotoMessageModelT, messageViewModel: any ThirdParty.MessageViewModelProtocol)
+  open func willBeShown()
+  open func wasHidden()
+  @objc deinit
+}
+open class PhotoMessageViewModelDefaultBuilder<PhotoMessageModelT> : ThirdParty.ViewModelBuilderProtocol where PhotoMessageModelT : ThirdParty.PhotoMessageModelProtocol {
+  public init()
+  open func createViewModel(_ model: PhotoMessageModelT) -> ThirdParty.PhotoMessageViewModel<PhotoMessageModelT>
+  open func canCreateViewModel(fromModel model: Any) -> Swift.Bool
+  public typealias ModelT = PhotoMessageModelT
+  public typealias ViewModelT = ThirdParty.PhotoMessageViewModel<PhotoMessageModelT>
+  @objc deinit
+}
+extension UIKit.UIImage {
+  public func bma_tintWithColor(_ color: UIKit.UIColor) -> UIKit.UIImage
+  public func bma_blendWithColor(_ color: UIKit.UIColor) -> UIKit.UIImage
+  public static func bma_imageWithColor(_ color: UIKit.UIColor, size: CoreFoundation.CGSize) -> UIKit.UIImage
+}
+public protocol ViewModelBuilderProtocol {
+  associatedtype ModelT : ThirdParty.MessageModelProtocol
+  associatedtype ViewModelT : ThirdParty.MessageViewModelProtocol
+  func canCreateViewModel(fromModel model: Any) -> Swift.Bool
+  func createViewModel(_ model: Self.ModelT) -> Self.ViewModelT
+}
+public protocol BaseMessageInteractionHandlerProtocol {
+  associatedtype ViewModelT
+  func userDidTapOnFailIcon(viewModel: Self.ViewModelT, failIconView: UIKit.UIView)
+  func userDidTapOnAvatar(viewModel: Self.ViewModelT)
+  func userDidTapOnBubble(viewModel: Self.ViewModelT)
+  func userDidBeginLongPressOnBubble(viewModel: Self.ViewModelT)
+  func userDidEndLongPressOnBubble(viewModel: Self.ViewModelT)
+  func userDidSelectMessage(viewModel: Self.ViewModelT)
+  func userDidDeselectMessage(viewModel: Self.ViewModelT)
+}
+open class BaseMessagePresenter<BubbleViewT, ViewModelBuilderT, InteractionHandlerT> : Chatto.BaseChatItemPresenter<ThirdParty.BaseMessageCollectionViewCell<BubbleViewT>> where BubbleViewT : UIKit.UIView, BubbleViewT : ThirdParty.BackgroundSizingQueryable, BubbleViewT : ThirdParty.MaximumLayoutWidthSpecificable, ViewModelBuilderT : ThirdParty.ViewModelBuilderProtocol, InteractionHandlerT : ThirdParty.BaseMessageInteractionHandlerProtocol, ViewModelBuilderT.ViewModelT == InteractionHandlerT.ViewModelT {
+  public typealias CellT = ThirdParty.BaseMessageCollectionViewCell<BubbleViewT>
+  public typealias ModelT = ViewModelBuilderT.ModelT
+  public typealias ViewModelT = ViewModelBuilderT.ViewModelT
+  public init(messageModel: ThirdParty.BaseMessagePresenter<BubbleViewT, ViewModelBuilderT, InteractionHandlerT>.ModelT, viewModelBuilder: ViewModelBuilderT, interactionHandler: InteractionHandlerT?, sizingCell: ThirdParty.BaseMessageCollectionViewCell<BubbleViewT>, cellStyle: any ThirdParty.BaseMessageCollectionViewCellStyleProtocol)
+  final public let messageModel: ThirdParty.BaseMessagePresenter<BubbleViewT, ViewModelBuilderT, InteractionHandlerT>.ModelT
+  final public let sizingCell: ThirdParty.BaseMessageCollectionViewCell<BubbleViewT>
+  final public let viewModelBuilder: ViewModelBuilderT
+  final public let interactionHandler: InteractionHandlerT?
+  final public let cellStyle: any ThirdParty.BaseMessageCollectionViewCellStyleProtocol
+  final public var messageViewModel: ThirdParty.BaseMessagePresenter<BubbleViewT, ViewModelBuilderT, InteractionHandlerT>.ViewModelT {
+    get
+  }
+  open func createViewModel() -> ThirdParty.BaseMessagePresenter<BubbleViewT, ViewModelBuilderT, InteractionHandlerT>.ViewModelT
+  final override public func configureCell(_ cell: UIKit.UICollectionViewCell, decorationAttributes: (any Chatto.ChatItemDecorationAttributesProtocol)?)
+  public var decorationAttributes: ThirdParty.ChatItemDecorationAttributes!
+  open func configureCell(_ cell: ThirdParty.BaseMessagePresenter<BubbleViewT, ViewModelBuilderT, InteractionHandlerT>.CellT, decorationAttributes: ThirdParty.ChatItemDecorationAttributes, animated: Swift.Bool, additionalConfiguration: (() -> Swift.Void)?)
+  override open func heightForCell(maximumWidth width: CoreFoundation.CGFloat, decorationAttributes: (any Chatto.ChatItemDecorationAttributesProtocol)?) -> CoreFoundation.CGFloat
+  override open var canCalculateHeightInBackground: Swift.Bool {
+    get
+  }
+  override open func cellWillBeShown()
+  override open func cellWasHidden()
+  override open func shouldShowMenu() -> Swift.Bool
+  open func canShowMenu() -> Swift.Bool
+  open func onCellBubbleTapped()
+  open func onCellBubbleLongPressBegan()
+  open func onCellBubbleLongPressEnded()
+  open func onCellAvatarTapped()
+  open func onCellFailedButtonTapped(_ failedButtonView: UIKit.UIView)
+  open func onCellSelection()
+  @objc deinit
+}
+extension ThirdParty.TrueTimeError : Swift.Equatable {}
+extension ThirdParty.TrueTimeError : Swift.Hashable {}
+extension ThirdParty.TrueTimeError : Swift.RawRepresentable {}
+extension ThirdParty.CircleIconType : Swift.Equatable {}
+extension ThirdParty.CircleIconType : Swift.Hashable {}
+extension ThirdParty.ChatInputItemPresentationMode : Swift.Equatable {}
+extension ThirdParty.ChatInputItemPresentationMode : Swift.Hashable {}
+extension ThirdParty.ChatInputItemPresentationMode : Swift.RawRepresentable {}
+extension ThirdParty.ntp_time32_t : Swift.Sendable {}
+extension ThirdParty.ntp_time64_t : Swift.Sendable {}
+extension ThirdParty.ntp_packet_t : Swift.Sendable {}
+extension ThirdParty.MessageViewModelStatus : Swift.Equatable {}
+extension ThirdParty.MessageViewModelStatus : Swift.Hashable {}
+extension ThirdParty.MessageStatus : Swift.Equatable {}
+extension ThirdParty.MessageStatus : Swift.Hashable {}
+extension ThirdParty.HorizontalAlignment : Swift.Equatable {}
+extension ThirdParty.HorizontalAlignment : Swift.Hashable {}
+extension ThirdParty.VerticalAlignment : Swift.Equatable {}
+extension ThirdParty.VerticalAlignment : Swift.Hashable {}
+extension ThirdParty.PhotosInputViewPhotoSource : Swift.Equatable {}
+extension ThirdParty.PhotosInputViewPhotoSource : Swift.Hashable {}
+extension ThirdParty.ViewContext : Swift.Equatable {}
+extension ThirdParty.ViewContext : Swift.Hashable {}
+extension ThirdParty.CircleProgressIndicatorView.ProgressType : Swift.Equatable {}
+extension ThirdParty.CircleProgressIndicatorView.ProgressType : Swift.Hashable {}
+extension ThirdParty.CircleProgressIndicatorView.ProgressStatus : Swift.Equatable {}
+extension ThirdParty.CircleProgressIndicatorView.ProgressStatus : Swift.Hashable {}
+extension ThirdParty.TransferDirection : Swift.Equatable {}
+extension ThirdParty.TransferDirection : Swift.Hashable {}
+extension ThirdParty.TransferStatus : Swift.Equatable {}
+extension ThirdParty.TransferStatus : Swift.Hashable {}
