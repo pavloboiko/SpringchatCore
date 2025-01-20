@@ -1,0 +1,404 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios16.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name SpringchatCoreFramework
+import AVFoundation
+import AVKit
+import AdSupport
+import Alamofire
+import Chatto
+import CoreGraphics
+import DGCharts
+import DeveloperToolsSupport
+import Filament
+import Foundation
+import Lottie
+import MetalKit
+import Mixpanel
+import Nuke
+import PhoneNumberKit
+import PopupDialog
+import Promise
+import QuartzCore
+import Realm
+import RealmSwift
+import RevenueCat
+import RxCocoa
+import RxDataSources
+import RxRealm
+import RxSwift
+import SceneKit
+import SnapKit
+import SocketIO
+@_exported import SpringchatCoreFramework
+import StoreKit
+import Swift
+import SwiftCSV
+import SwiftUI
+import SwiftyGif
+import SystemConfiguration
+import TTGTags
+import ThirdParty
+import Toaster
+import UIKit
+import YouTubeiOSPlayerHelper
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class CustomTextBubbleView : UIKit.UIView, ThirdParty.MaximumLayoutWidthSpecificable, ThirdParty.BackgroundSizingQueryable {
+  @_Concurrency.MainActor(unsafe) final public var preferredMaxLayoutWidth: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) final public var animationDuration: Swift.Double
+  @_Concurrency.MainActor(unsafe) final public var viewContext: ThirdParty.ViewContext {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var style: (any ThirdParty.TextBubbleViewStyleProtocol)! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var textMessageViewModel: (any ThirdParty.TextMessageViewModelProtocol)! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var selected: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) final public var bubbleImageView: UIKit.UIImageView {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var isUpdating: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) final public func performBatchUpdates(_ updateClosure: @escaping () -> Swift.Void, animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) @objc override final public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override final public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) final public var layoutCache: Foundation.NSCache<Swift.AnyObject, Swift.AnyObject>!
+  @_Concurrency.MainActor(unsafe) final public var canCalculateSizeInBackground: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+public enum SpringchatFont : Swift.String, Swift.CaseIterable {
+  case helveticaNeue
+  case helveticaNeueLight
+  case helveticaNeueMedium
+  case helveticaNeueMediumItalic
+  case helveticaNeueBold
+  case greycliffCF
+  case greycliffCFMedium
+  case greycliffCFMediumOblique
+  case greycliffCFDemiBold
+  case greycliffCFBold
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [SpringchatCoreFramework.SpringchatFont]
+  public typealias RawValue = Swift.String
+  public static var allCases: [SpringchatCoreFramework.SpringchatFont] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class FontLoader {
+  public static func registerFont(withName name: Swift.String, fileExtension: Swift.String = "otf")
+  @objc deinit
+}
+public func Log<T>(_ object: T?, filename: Swift.String = #file, line: Swift.Int = #line, funcname: Swift.String = #function)
+@objc @_inheritsConvenienceInitializers open class LogManager : ObjectiveC.NSObject {
+  public static func log(_ string: Swift.String, _ logToFile: Swift.Bool = true)
+  @objc override dynamic public init()
+  @objc deinit
+}
+open class CustomBaseMessagePresenter<BubbleViewT, ViewModelBuilderT, InteractionHandlerT> : Chatto.BaseChatItemPresenter<SpringchatCoreFramework.CustomBaseMessageCollectionViewCell<BubbleViewT>> where BubbleViewT : UIKit.UIView, BubbleViewT : ThirdParty.BackgroundSizingQueryable, BubbleViewT : ThirdParty.MaximumLayoutWidthSpecificable, ViewModelBuilderT : ThirdParty.ViewModelBuilderProtocol, InteractionHandlerT : ThirdParty.BaseMessageInteractionHandlerProtocol, ViewModelBuilderT.ViewModelT == InteractionHandlerT.ViewModelT {
+  public typealias CellT = SpringchatCoreFramework.CustomBaseMessageCollectionViewCell<BubbleViewT>
+  public typealias ModelT = ViewModelBuilderT.ModelT
+  public typealias ViewModelT = ViewModelBuilderT.ViewModelT
+  public init(messageModel: SpringchatCoreFramework.CustomBaseMessagePresenter<BubbleViewT, ViewModelBuilderT, InteractionHandlerT>.ModelT, viewModelBuilder: ViewModelBuilderT, interactionHandler: InteractionHandlerT?, sizingCell: SpringchatCoreFramework.CustomBaseMessageCollectionViewCell<BubbleViewT>, cellStyle: any ThirdParty.BaseMessageCollectionViewCellStyleProtocol)
+  final public let messageModel: SpringchatCoreFramework.CustomBaseMessagePresenter<BubbleViewT, ViewModelBuilderT, InteractionHandlerT>.ModelT
+  final public let sizingCell: SpringchatCoreFramework.CustomBaseMessageCollectionViewCell<BubbleViewT>
+  final public let viewModelBuilder: ViewModelBuilderT
+  final public let interactionHandler: InteractionHandlerT?
+  final public let cellStyle: any ThirdParty.BaseMessageCollectionViewCellStyleProtocol
+  final public var messageViewModel: SpringchatCoreFramework.CustomBaseMessagePresenter<BubbleViewT, ViewModelBuilderT, InteractionHandlerT>.ViewModelT {
+    get
+  }
+  open func createViewModel() -> SpringchatCoreFramework.CustomBaseMessagePresenter<BubbleViewT, ViewModelBuilderT, InteractionHandlerT>.ViewModelT
+  override final public func configureCell(_ cell: UIKit.UICollectionViewCell, decorationAttributes: (any Chatto.ChatItemDecorationAttributesProtocol)?)
+  public var decorationAttributes: ThirdParty.ChatItemDecorationAttributes!
+  open func configureCell(_ cell: SpringchatCoreFramework.CustomBaseMessagePresenter<BubbleViewT, ViewModelBuilderT, InteractionHandlerT>.CellT, decorationAttributes: ThirdParty.ChatItemDecorationAttributes, animated: Swift.Bool, additionalConfiguration: (() -> Swift.Void)?)
+  override open func heightForCell(maximumWidth width: CoreFoundation.CGFloat, decorationAttributes: (any Chatto.ChatItemDecorationAttributesProtocol)?) -> CoreFoundation.CGFloat
+  override open var canCalculateHeightInBackground: Swift.Bool {
+    get
+  }
+  override open func cellWillBeShown()
+  override open func cellWasHidden()
+  override open func shouldShowMenu() -> Swift.Bool
+  open func canShowMenu() -> Swift.Bool
+  open func onCellBubbleTapped()
+  open func onCellBubbleLongPressBegan()
+  open func onCellBubbleLongPressEnded()
+  open func onCellAvatarTapped()
+  open func onCellFailedButtonTapped(_ failedButtonView: UIKit.UIView)
+  open func onCellSelection()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SCCMainViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) open var videoViewController: UIKit.UIViewController!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CustomBaseMessageCollectionViewCell<BubbleViewType> : UIKit.UICollectionViewCell, ThirdParty.BackgroundSizingQueryable, Chatto.AccessoryViewRevealable, UIKit.UIGestureRecognizerDelegate where BubbleViewType : UIKit.UIView, BubbleViewType : ThirdParty.BackgroundSizingQueryable, BubbleViewType : ThirdParty.MaximumLayoutWidthSpecificable {
+  @_Concurrency.MainActor(unsafe) public var animationDuration: Swift.Double
+  @_Concurrency.MainActor(unsafe) open var viewContext: ThirdParty.ViewContext
+  @_Concurrency.MainActor(unsafe) public var isUpdating: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open func performBatchUpdates(_ updateClosure: @escaping () -> Swift.Void, animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) open var messageViewModel: (any ThirdParty.MessageViewModelProtocol)! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var baseStyle: (any ThirdParty.BaseMessageCollectionViewCellStyleProtocol)! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var canCalculateSizeInBackground: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var bubbleView: BubbleViewType! {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open func createBubbleView() -> BubbleViewType!
+  @_Concurrency.MainActor(unsafe) public var avatarView: UIKit.UIImageView! {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var timestampLabel: UIKit.UILabel! {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var incomingTimestampLabel: UIKit.UILabel! {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var statusImageView: UIKit.UIImageView! {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public var tapGestureRecognizer: UIKit.UITapGestureRecognizer {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var rightSwipeGestureRecognizer: UIKit.UISwipeGestureRecognizer {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var longPressGestureRecognizer: UIKit.UILongPressGestureRecognizer {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var panGestureRecognizer: UIKit.UIPanGestureRecognizer {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var avatarTapGestureRecognizer: UIKit.UITapGestureRecognizer {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc open func gestureRecognizer(_: UIKit.UIGestureRecognizer, shouldReceive touch: UIKit.UITouch) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc open func gestureRecognizer(_: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith _: UIKit.UIGestureRecognizer) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepareForReuse()
+  @_Concurrency.MainActor(unsafe) public var failedButton: UIKit.UIButton {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) public var allowAccessoryViewRevealing: Swift.Bool
+  @_Concurrency.MainActor(unsafe) open func preferredOffsetToRevealAccessoryView() -> CoreFoundation.CGFloat?
+  @_Concurrency.MainActor(unsafe) open func revealAccessoryView(withOffset offset: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public var onSelection: ((_ cell: SpringchatCoreFramework.CustomBaseMessageCollectionViewCell<BubbleViewType>) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) public var onFailedButtonTapped: ((_ cell: SpringchatCoreFramework.CustomBaseMessageCollectionViewCell<BubbleViewType>) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) public var onAvatarTapped: ((_ cell: SpringchatCoreFramework.CustomBaseMessageCollectionViewCell<BubbleViewType>) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) public var onBubbleTapped: ((_ cell: SpringchatCoreFramework.CustomBaseMessageCollectionViewCell<BubbleViewType>) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) public var onBubbleLongPressBegan: ((_ cell: SpringchatCoreFramework.CustomBaseMessageCollectionViewCell<BubbleViewType>) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) public var onBubbleLongPressEnded: ((_ cell: SpringchatCoreFramework.CustomBaseMessageCollectionViewCell<BubbleViewType>) -> Swift.Void)?
+  @objc deinit
+}
+public func print(_ object: Any)
+@_hasMissingDesignatedInitializers public class TypingIndicatorPresenterBuilder : Chatto.ChatItemPresenterBuilderProtocol {
+  public func canHandleChatItem(_ chatItem: any Chatto.ChatItemProtocol) -> Swift.Bool
+  public func createPresenterWithChatItem(_ chatItem: any Chatto.ChatItemProtocol) -> any Chatto.ChatItemPresenterProtocol
+  public var presenterType: any Chatto.ChatItemPresenterProtocol.Type {
+    get
+  }
+  @objc deinit
+}
+open class CustomTextChatInputItem {
+  public var textInputHandler: ((Swift.String) -> Swift.Void)?
+  public init(tabInputButtonAppearance: ThirdParty.TabInputButtonAppearance = TextChatInputItem.createDefaultButtonAppearance())
+  public static func createDefaultButtonAppearance() -> ThirdParty.TabInputButtonAppearance
+  open var selected: Swift.Bool {
+    get
+    set
+  }
+  @objc deinit
+}
+extension SpringchatCoreFramework.CustomTextChatInputItem : ThirdParty.ChatInputItemProtocol {
+  public var supportsExpandableState: Swift.Bool {
+    get
+  }
+  public var expandedStateTopMargin: CoreFoundation.CGFloat {
+    get
+  }
+  public var presentationMode: ThirdParty.ChatInputItemPresentationMode {
+    get
+  }
+  public var showsSendButton: Swift.Bool {
+    get
+  }
+  public var inputView: UIKit.UIView? {
+    get
+  }
+  public var tabView: UIKit.UIView {
+    get
+  }
+  public func handleInput(_ input: Swift.AnyObject)
+}
+@_hasMissingDesignatedInitializers final public class SCCManager {
+  public static let shared: SpringchatCoreFramework.SCCManager
+  final public var isInnerMode: Swift.Bool {
+    get
+  }
+  final public func initialize(prod: Swift.Bool = true, viewMode: SpringchatCoreFramework.SCCViewMode = .inner, consumerConfigure: SpringchatCoreFramework.SCCConsumerConfigure? = nil, purchasesConfigure: SpringchatCoreFramework.SCCPurchasesConfigure? = nil)
+  @objc deinit
+}
+public enum SCCViewMode {
+  case inner, tab
+  public static func == (a: SpringchatCoreFramework.SCCViewMode, b: SpringchatCoreFramework.SCCViewMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct SCCConsumerConfigure {
+  public var id: Swift.String
+  public var key: Swift.String
+  public init(id: Swift.String = "", key: Swift.String = "")
+}
+public struct SCCPurchasesConfigure {
+  public var publicAPIKey: Swift.String
+  public var appUserID: Swift.String?
+  public init(publicAPIKey: Swift.String = "", appUserID: Swift.String? = nil)
+}
+public struct SCCConfigure {
+  public var prod: Swift.Bool
+  public var viewMode: SpringchatCoreFramework.SCCViewMode
+  public var consumerConfigure: SpringchatCoreFramework.SCCConsumerConfigure?
+  public var purchasesConfigure: SpringchatCoreFramework.SCCPurchasesConfigure?
+}
+public typealias ChatSummaryViewCompletion = (() -> Swift.Void)
+public protocol ProfileImagePickerDelegate : AnyObject {
+  func didSelect(image: UIKit.UIImage?)
+}
+@objc open class ProfileImagePicker : ObjectiveC.NSObject {
+  public init(presentationController: UIKit.UIViewController, delegate: any SpringchatCoreFramework.ProfileImagePickerDelegate)
+  public func present(from sourceView: UIKit.UIView)
+  @objc deinit
+}
+extension SpringchatCoreFramework.ProfileImagePicker : UIKit.UIImagePickerControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func imagePickerControllerDidCancel(_ picker: UIKit.UIImagePickerController)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func imagePickerController(_ picker: UIKit.UIImagePickerController, didFinishPickingMediaWithInfo info: [UIKit.UIImagePickerController.InfoKey : Any])
+}
+extension SpringchatCoreFramework.ProfileImagePicker : UIKit.UINavigationControllerDelegate {
+}
+extension Swift.Collection {
+  public subscript(safe index: Self.Index) -> Self.Iterator.Element? {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class CustomTextMessageCollectionViewCell : SpringchatCoreFramework.CustomBaseMessageCollectionViewCell<SpringchatCoreFramework.CustomTextBubbleView> {
+  @_Concurrency.MainActor(unsafe) public static func sizingCell() -> SpringchatCoreFramework.CustomTextMessageCollectionViewCell
+  @_Concurrency.MainActor(unsafe) override final public func createBubbleView() -> SpringchatCoreFramework.CustomTextBubbleView
+  @_Concurrency.MainActor(unsafe) override final public func performBatchUpdates(_ updateClosure: @escaping () -> Swift.Void, animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) override final public var viewContext: ThirdParty.ViewContext {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var textMessageViewModel: (any ThirdParty.TextMessageViewModelProtocol)! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var textMessageStyle: (any ThirdParty.TextBubbleViewStyleProtocol)! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) final public var layoutCache: Foundation.NSCache<Swift.AnyObject, Swift.AnyObject>! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol SeeMoreLabelDelegate : AnyObject {
+  func trailingTextTapped()
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class SeeMoreLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc override final public var text: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) weak final public var delegate: (any SpringchatCoreFramework.SeeMoreLabelDelegate)?
+  @_Concurrency.MainActor(unsafe) final public func addTrailingText(trailingText: Swift.String = "...", textToAppend: Swift.String, fontOfTextToAppend: UIKit.UIFont, colorOfTextToAppend: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) final public func revertToInitialState()
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@_hasMissingDesignatedInitializers final public class SpringchatCoreManager {
+  public static let shared: SpringchatCoreFramework.SpringchatCoreManager
+  final public func printLog()
+  @objc deinit
+}
+@IBDesignable extension UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+@IBDesignable extension UIKit.UITextView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+@IBDesignable extension UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+@IBDesignable extension UIKit.UINavigationItem {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+@IBDesignable extension UIKit.UITabBarItem {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+extension UIKit.UIBarButtonItem {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+@IBDesignable extension UIKit.UITextField {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+@IBDesignable extension UIKit.UISearchBar {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+@available(iOS 11.0, tvOS 11.0, *)
+@available(watchOS, unavailable)
+extension UIKit.UIImage {
+  #warning("The "add" image asset name resolves to a conflicting UIImage symbol "add". Try renaming the asset.")
+  #warning("The "remove" image asset name resolves to a conflicting UIImage symbol "remove". Try renaming the asset.")
+}
+extension SpringchatCoreFramework.SpringchatFont : Swift.Equatable {}
+extension SpringchatCoreFramework.SpringchatFont : Swift.Hashable {}
+extension SpringchatCoreFramework.SpringchatFont : Swift.RawRepresentable {}
+extension SpringchatCoreFramework.SCCViewMode : Swift.Equatable {}
+extension SpringchatCoreFramework.SCCViewMode : Swift.Hashable {}

@@ -8,8 +8,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "SpringchatCoreSDK",
-            targets: ["SpringchatCoreWrapper"]
+            name: "SpringchatCoreFramework",
+            targets: ["SpringchatCoreFramework"]
         ),
     ],
     dependencies: [
@@ -20,20 +20,8 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "SpringchatCore",
-            path: "./SpringchatCore.xcframework"
-        ),
-        .target(
-            name: "SpringchatCoreWrapper",
-            dependencies: [
-                "SpringchatCore",
-                .product(name: "RealmSwift", package: "realm-swift"),
-            ],
-            path: "./SpringchatCoreWrapper", // Custom path for your wrapper's source files
-            linkerSettings: [
-                .linkedFramework("Realm"),
-                .linkedFramework("RealmSwift"),
-            ]
+            name: "SpringchatCoreFramework",
+            path: "./SpringchatCoreFramework.xcframework"
         )
     ]
 )
