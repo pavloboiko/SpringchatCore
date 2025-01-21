@@ -12,14 +12,6 @@ let package = Package(
             targets: ["SpringchatCoreFramework"]
         ),
         .library(
-            name: "Chatto",
-            targets: ["Chatto"]
-        ),
-        .library(
-            name: "Thirdparty",
-            targets: ["Thirdparty"]
-        ),
-        .library(
             name: "SpringchatCore",
             targets: ["SpringchatCore"]
         ),
@@ -107,14 +99,6 @@ let package = Package(
             name: "SpringchatCoreFramework",
             path: "./SpringchatCoreFramework.xcframework"
         ),
-        .binaryTarget(
-            name: "Chatto",
-            path: "./Chatto.xcframework"
-        ),
-        .binaryTarget(
-            name: "Thirdparty",
-            path: "./Thirdparty.xcframework"
-        ),
         .target(
             name: "SpringchatCore",
             dependencies: [
@@ -199,8 +183,6 @@ let package = Package(
                     package: "socket.io-client-swift"
                 ),
                 .target(name: "SpringchatCoreFramework"),
-                .target(name: "Thirdparty"),
-                .target(name: "Chatto")
             ],
             path: "Sources/Dependencies"
         ),

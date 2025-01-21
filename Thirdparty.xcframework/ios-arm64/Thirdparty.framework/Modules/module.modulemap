@@ -1,6 +1,0 @@
-framework module ThirdParty {
-  umbrella header "ThirdParty.h"
-  export *
-
-  module * { export * }
-}
