@@ -126,7 +126,7 @@
 		</data>
 		<key>Frameworks/AlamofireDynamic.framework/AlamofireDynamic</key>
 		<data>
-		7rIzUOvi3XsKV4rh6swOSnpdtiY=
+		xlb4fDgc+vNwRL7gC55+NatdASA=
 		</data>
 		<key>Frameworks/AlamofireDynamic.framework/Info.plist</key>
 		<data>
@@ -138,7 +138,7 @@
 		</data>
 		<key>Frameworks/Chatto.framework/Chatto</key>
 		<data>
-		lwPCVqoKpjIWpmH1HuQLro8zq4w=
+		jBQY9fUCR/6Z1gVcEW+E/op1wE4=
 		</data>
 		<key>Frameworks/Chatto.framework/Info.plist</key>
 		<data>
@@ -150,7 +150,7 @@
 		</data>
 		<key>Frameworks/DGChartsDynamic.framework/DGChartsDynamic</key>
 		<data>
-		fu4APS9gEw9maxwlQaQ7jBjGqsM=
+		jlW8WgGgcUPdpNzYpRvRo9AM0Qk=
 		</data>
 		<key>Frameworks/DGChartsDynamic.framework/Info.plist</key>
 		<data>
@@ -166,7 +166,7 @@
 		</data>
 		<key>Frameworks/PhoneNumberKit-Dynamic.framework/PhoneNumberKit-Dynamic</key>
 		<data>
-		iigPDrK3OXTIadIshzvu3BKUhvM=
+		4xLmp6WFundsZSM3fSfB3T+utGE=
 		</data>
 		<key>Frameworks/PhoneNumberKit-Dynamic.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -178,7 +178,7 @@
 		</data>
 		<key>Frameworks/RealmSwift.framework/RealmSwift</key>
 		<data>
-		87UAMaXfdYKwY36ch3tPL1xkI+o=
+		CL5/fGBJrxClSyj8q1bjRk2bcfk=
 		</data>
 		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -190,7 +190,7 @@
 		</data>
 		<key>Frameworks/SnapKit-Dynamic.framework/SnapKit-Dynamic</key>
 		<data>
-		mxkVPTsVp7cc0lbmYVhW3ZlptzA=
+		OsiVhizCZ4NCwPjLxgX4SQ1yuoE=
 		</data>
 		<key>Frameworks/SnapKit-Dynamic.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -202,7 +202,7 @@
 		</data>
 		<key>Frameworks/SwiftyGif-Dynamic.framework/SwiftyGif-Dynamic</key>
 		<data>
-		K3J+aL5qDGXjIvp+fzgAUgj8Ahg=
+		9XMo8GWMmpbwrcddTHWGW52vJgs=
 		</data>
 		<key>Frameworks/SwiftyGif-Dynamic.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -1242,7 +1242,7 @@
 		</data>
 		<key>Frameworks/ThirdParty.framework/Frameworks/Chatto.framework/Chatto</key>
 		<data>
-		NdlqVjv5kS6MFJl/1VO+C2nlfUc=
+		761ReQv4tS0z4MslqEaeGQxMLmE=
 		</data>
 		<key>Frameworks/ThirdParty.framework/Frameworks/Chatto.framework/Info.plist</key>
 		<data>
@@ -1266,11 +1266,11 @@
 		</data>
 		<key>Frameworks/ThirdParty.framework/ThirdParty</key>
 		<data>
-		1e2Nyv+SRfNj6rphQYsz4769Xmo=
+		1rlSyYuC0HSYY1kCi2+yZz7XwwU=
 		</data>
 		<key>Frameworks/ThirdParty.framework/_CodeSignature/CodeResources</key>
 		<data>
-		ERqEFtRf72OAe053pPqTkMiWzP0=
+		z9IJyrLpB3rZs5sQ6j4O+G1tbgs=
 		</data>
 		<key>Game.storyboardc/Info.plist</key>
 		<data>
@@ -1912,7 +1912,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eQNN15C+e0w6hJoD/s3csLjMtycKUtK6TxD71gRlTvk=
+			cce+JFapQwx43C/E6HOXYe4jBVxvjXP3ACywKiaoNC8=
 			</data>
 		</dict>
 		<key>Frameworks/AlamofireDynamic.framework/Info.plist</key>
@@ -1933,7 +1933,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1m2p9D6K+i1vwQ8EVsJWKp4sYfmZpj77Zamjx0fCiY0=
+			k4v8tfQI09Ql310HMx/QagwW1omIPsu0Cav9O1LcNNI=
 			</data>
 		</dict>
 		<key>Frameworks/Chatto.framework/Info.plist</key>
@@ -1954,7 +1954,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			g9X24F+4RQ28pal2G0LYAR1qCHMmWZBKvdzQp+TG9eU=
+			wf2PcjaMdCF0xFX8/lVPO9fOpxOtxI4gu9RVDkYY4xY=
 			</data>
 		</dict>
 		<key>Frameworks/DGChartsDynamic.framework/Info.plist</key>
@@ -1982,7 +1982,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			moSJfaTtxdA2z8O19kpT2eTSMqvnHBAmpaLURokCoFE=
+			GdQAoX+NfiYq8yeWV2usVDYy8nZGGa6ddQhlwZO20bE=
 			</data>
 		</dict>
 		<key>Frameworks/PhoneNumberKit-Dynamic.framework/_CodeSignature/CodeResources</key>
@@ -2003,7 +2003,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RwYcKVK1JsbcIYWJXPyQLk0Ydty8zrBEPWHq523iYAs=
+			cbWfWp+rkgaOsNzWkiZ+qDNAI8nHnrTvfMfEXX9H0mE=
 			</data>
 		</dict>
 		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
@@ -2024,7 +2024,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			l92/+OzX/Vs/SyAb5JzxLrMrRBBHmKmnrjUzpYkG5tc=
+			wGYB0kyt6BTNGLZh5okERwNCgcUWV21wA2fXeop2JNA=
 			</data>
 		</dict>
 		<key>Frameworks/SnapKit-Dynamic.framework/_CodeSignature/CodeResources</key>
@@ -2045,7 +2045,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eKMFKVv1I84IwAg83oUNCaEZXlN5yl+gB8g1ZaPgaOc=
+			ryTXq7clJE/L5VN2LXVlJ+awM2iZOaRF2SYIWG4yQXE=
 			</data>
 		</dict>
 		<key>Frameworks/SwiftyGif-Dynamic.framework/_CodeSignature/CodeResources</key>
@@ -3865,7 +3865,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zI5A5zLBmoiLy4UAaUazDkQi2X5YxSCeMOSJM090vGw=
+			ewBU9fqICPwD6fI8sOroMR6OPWj5ndP0G15sqg7yU9I=
 			</data>
 		</dict>
 		<key>Frameworks/ThirdParty.framework/Frameworks/Chatto.framework/Info.plist</key>
@@ -3907,14 +3907,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			O3KsOavFeTioJfE2F2h1PP0EniLnmlCtvU7QMoDkigg=
+			qj6ZHzWGm5kbc3nzPJeenpY+YWfyB8gT6f91Ehn7o9I=
 			</data>
 		</dict>
 		<key>Frameworks/ThirdParty.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ArGaXQB/Rb2XFIrrrafeFE/dAw/6W4t0T+ZFgn0Dj+0=
+			Kl0IJjEd//5Q0BvxQjO2Jzc7FF0m4hUsGmKm/uX5gI8=
 			</data>
 		</dict>
 		<key>Game.storyboardc/Info.plist</key>
