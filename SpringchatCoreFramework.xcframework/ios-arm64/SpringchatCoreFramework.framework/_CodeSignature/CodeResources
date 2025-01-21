@@ -126,7 +126,7 @@
 		</data>
 		<key>Frameworks/AlamofireDynamic.framework/AlamofireDynamic</key>
 		<data>
-		XXurmK8+OAQQY7nJ6eU9MxCzE90=
+		7rIzUOvi3XsKV4rh6swOSnpdtiY=
 		</data>
 		<key>Frameworks/AlamofireDynamic.framework/Info.plist</key>
 		<data>
@@ -150,7 +150,7 @@
 		</data>
 		<key>Frameworks/DGChartsDynamic.framework/DGChartsDynamic</key>
 		<data>
-		N7B/NHyL7p6tCzeNz8SfwOaCSAg=
+		fu4APS9gEw9maxwlQaQ7jBjGqsM=
 		</data>
 		<key>Frameworks/DGChartsDynamic.framework/Info.plist</key>
 		<data>
@@ -166,7 +166,7 @@
 		</data>
 		<key>Frameworks/PhoneNumberKit-Dynamic.framework/PhoneNumberKit-Dynamic</key>
 		<data>
-		DV1r2YWzuZ4CRzlaBp5249/twZs=
+		iigPDrK3OXTIadIshzvu3BKUhvM=
 		</data>
 		<key>Frameworks/PhoneNumberKit-Dynamic.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -178,7 +178,7 @@
 		</data>
 		<key>Frameworks/RealmSwift.framework/RealmSwift</key>
 		<data>
-		dubAw7FYjXLXwCv+P1RKbuQEsK8=
+		87UAMaXfdYKwY36ch3tPL1xkI+o=
 		</data>
 		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -190,7 +190,7 @@
 		</data>
 		<key>Frameworks/SnapKit-Dynamic.framework/SnapKit-Dynamic</key>
 		<data>
-		jlhBSszi+RXpI17X7jMr6EkRec0=
+		mxkVPTsVp7cc0lbmYVhW3ZlptzA=
 		</data>
 		<key>Frameworks/SnapKit-Dynamic.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -202,7 +202,7 @@
 		</data>
 		<key>Frameworks/SwiftyGif-Dynamic.framework/SwiftyGif-Dynamic</key>
 		<data>
-		yHqUrbD3rHJx7eJpLx6MSWZDkRI=
+		K3J+aL5qDGXjIvp+fzgAUgj8Ahg=
 		</data>
 		<key>Frameworks/SwiftyGif-Dynamic.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -1266,7 +1266,7 @@
 		</data>
 		<key>Frameworks/ThirdParty.framework/ThirdParty</key>
 		<data>
-		++zp3FzKl45FyOrJ10y7pcD9TXM=
+		1e2Nyv+SRfNj6rphQYsz4769Xmo=
 		</data>
 		<key>Frameworks/ThirdParty.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -1382,15 +1382,15 @@
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		tG5u7BaO5dL32uOrEiQ6owDYhMU=
+		g0tbR03ncxD3GO3XGhu4zBQ4zcM=
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		o+Oxl7T917zIieAI3UcJRL8Aqn8=
+		elixEGUbGuTBohTiZncBWm5lM4U=
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		NOOlDKqjOZu9qr1SpwoCpS4MRkU=
+		mUZ7uE7K13cfSaqRBufcv+Nk0uA=
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -1398,11 +1398,11 @@
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		NOOlDKqjOZu9qr1SpwoCpS4MRkU=
+		mUZ7uE7K13cfSaqRBufcv+Nk0uA=
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		UodzVB090w1YGLgOXp7F9+lwbis=
+		vbwXiOvSGPVS8zIFioiW9Ao/DcU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1912,7 +1912,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bzYMSUbn4SFACjIpz9okDzlBhpYK0ok7DxyNw8tSjLc=
+			eQNN15C+e0w6hJoD/s3csLjMtycKUtK6TxD71gRlTvk=
 			</data>
 		</dict>
 		<key>Frameworks/AlamofireDynamic.framework/Info.plist</key>
@@ -1954,7 +1954,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MSCfVf5Bua3xflLkJHXiqXg61hO8fowA9bUXzVsxHF0=
+			g9X24F+4RQ28pal2G0LYAR1qCHMmWZBKvdzQp+TG9eU=
 			</data>
 		</dict>
 		<key>Frameworks/DGChartsDynamic.framework/Info.plist</key>
@@ -1982,7 +1982,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yqyiEcOMcc7CR1jVut/mrLu22sgpnrZQZ+CJyWAtZ1A=
+			moSJfaTtxdA2z8O19kpT2eTSMqvnHBAmpaLURokCoFE=
 			</data>
 		</dict>
 		<key>Frameworks/PhoneNumberKit-Dynamic.framework/_CodeSignature/CodeResources</key>
@@ -2003,7 +2003,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UXzV3mI8tNrzs9gHzgD/aS2+3/dXMcze0KHpbqy0qFc=
+			RwYcKVK1JsbcIYWJXPyQLk0Ydty8zrBEPWHq523iYAs=
 			</data>
 		</dict>
 		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
@@ -2024,7 +2024,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			59oH8mNIbld97X4p79tM69RLgRbtQo0yQBVhBxOV2yg=
+			l92/+OzX/Vs/SyAb5JzxLrMrRBBHmKmnrjUzpYkG5tc=
 			</data>
 		</dict>
 		<key>Frameworks/SnapKit-Dynamic.framework/_CodeSignature/CodeResources</key>
@@ -2045,7 +2045,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RMNRCmB4e/VkQtxaaNWjIqehwtLg+WmeXyUQzPqHCS0=
+			eKMFKVv1I84IwAg83oUNCaEZXlN5yl+gB8g1ZaPgaOc=
 			</data>
 		</dict>
 		<key>Frameworks/SwiftyGif-Dynamic.framework/_CodeSignature/CodeResources</key>
@@ -3907,7 +3907,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rBai4YN2Tirf/V+uLJiERZPp0o/13F9o3+r6+BH0N84=
+			O3KsOavFeTioJfE2F2h1PP0EniLnmlCtvU7QMoDkigg=
 			</data>
 		</dict>
 		<key>Frameworks/ThirdParty.framework/_CodeSignature/CodeResources</key>
@@ -4103,21 +4103,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4VAi2/Y9umI3Y59ljL7eZ78J9XgiENKcWZ3BGSwnRVU=
+			qOaAmB5wx5kbivZQ2RzFK0p30gkcaxpt71S99EE1TSQ=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			19O/m9tA892FFBsrWYTdE/k20Wgh1qsoLbBQpAg8kG0=
+			Ug+sr+dUL74EaC1BPxF2Bzc/QyR8j+R4laEf+dzK8n8=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+GC9GzQE1J7t0wc4oXwIxu88FfwCd5O1VX/5GlJcYXs=
+			p3LNM+nfyb6ImxfzuNqaOt+QUTc9RIRSAmLrhf3mnw0=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -4131,14 +4131,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+GC9GzQE1J7t0wc4oXwIxu88FfwCd5O1VX/5GlJcYXs=
+			p3LNM+nfyb6ImxfzuNqaOt+QUTc9RIRSAmLrhf3mnw0=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mDkzpW9TEOB64bforuE/mt47OFPvVbCWIN30LV1rbDE=
+			NV2X+zeMVHZjy0GXMw3CgT99TX7cVL3hdiEP8LUhtaU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
