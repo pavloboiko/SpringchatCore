@@ -9,7 +9,15 @@ let package = Package(
     products: [
         .library(
             name: "SpringchatCoreFramework",
-            targets: ["SpringchatCoreFramework", "Chatto", "Thirdparty"]
+            targets: ["SpringchatCoreFramework"]
+        ),
+        .library(
+            name: "Chatto",
+            targets: ["Chatto"]
+        ),
+        .library(
+            name: "Thirdparty",
+            targets: ["Thirdparty"]
         ),
         .library(
             name: "SpringchatCore",

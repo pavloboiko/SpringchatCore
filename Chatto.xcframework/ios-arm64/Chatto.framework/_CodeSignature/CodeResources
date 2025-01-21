@@ -45,6 +45,10 @@
 	<dict>
 		<key>Headers/Chatto.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			w7Bs9OHwDdlYiTBD4KS0JiGIKMI=
+			</data>
 			<key>hash2</key>
 			<data>
 			+BLMXDtPRf8BYo6V2dpT2v6Yxa1/CvRKyG6w1n4tsDk=
@@ -52,6 +56,10 @@
 		</dict>
 		<key>Modules/Chatto.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			/fM+9d4BcYmbnDnkUMXX+f7RBWs=
+			</data>
 			<key>hash2</key>
 			<data>
 			jcwgiPzVvuJJYGhlDav4FIB0B32BfK8KOZ+tHEN8MC8=
@@ -59,6 +67,10 @@
 		</dict>
 		<key>Modules/Chatto.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			qVPE+PU0E8tTqded32Hw1qdaTc0=
+			</data>
 			<key>hash2</key>
 			<data>
 			3rc7WmLkFvBCHR6EnATHKJk36ekMZ/vDJZp1tfhi2Vk=
@@ -66,6 +78,10 @@
 		</dict>
 		<key>Modules/Chatto.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			3O7YBAZMXVvTFFslEDB4pZLmknE=
+			</data>
 			<key>hash2</key>
 			<data>
 			QXjc7PoVvNy3kgY3aYEZwVZXENs7o7bQfzeebeeLF9U=
@@ -73,6 +89,10 @@
 		</dict>
 		<key>Modules/Chatto.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			KebNr7i2zf0iQNL0D3K76tuqZgs=
+			</data>
 			<key>hash2</key>
 			<data>
 			TebshXHv+jiVb34MbbGI9QtRZNyDy089otjozGz587s=
@@ -80,6 +100,10 @@
 		</dict>
 		<key>Modules/Chatto.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			3O7YBAZMXVvTFFslEDB4pZLmknE=
+			</data>
 			<key>hash2</key>
 			<data>
 			QXjc7PoVvNy3kgY3aYEZwVZXENs7o7bQfzeebeeLF9U=
@@ -87,6 +111,10 @@
 		</dict>
 		<key>Modules/Chatto.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			GGrc7XA4wVLG71a+qhmy9zhjqRs=
+			</data>
 			<key>hash2</key>
 			<data>
 			axoKLtNsGjDPVdW3/Egr72iogLRxBsE6L589QAvS6E4=
@@ -94,6 +122,10 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			qhI0hrXJtSDs/Awp/W5rLb+uGJU=
+			</data>
 			<key>hash2</key>
 			<data>
 			Pqgwil22oUWuAEgShlMZh/U5ueTSKmIGkpD6RBMyEr8=
