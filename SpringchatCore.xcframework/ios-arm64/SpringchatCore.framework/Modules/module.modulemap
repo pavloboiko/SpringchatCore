@@ -1,0 +1,6 @@
+framework module SpringchatCore {
+  umbrella header "SpringchatCore.h"
+  export *
+
+  module * { export * }
+}

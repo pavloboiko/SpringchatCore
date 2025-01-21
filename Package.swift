@@ -15,7 +15,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SpringchatCore",
-            path: "./SpringchatCoreFramework.xcframework"
+            path: "./SpringchatCore.xcframework"
         ),
     ]
 )

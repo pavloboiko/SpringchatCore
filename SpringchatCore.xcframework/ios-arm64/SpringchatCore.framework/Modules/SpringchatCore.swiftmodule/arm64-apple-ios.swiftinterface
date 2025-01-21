@@ -1,0 +1,87 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios16.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name SpringchatCore
+import AVFoundation
+import AVKit
+import AdSupport
+import CoreGraphics
+import DeveloperToolsSupport
+import Foundation
+import MetalKit
+import QuartzCore
+import SceneKit
+@_exported import SpringchatCore
+import StoreKit
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@IBDesignable extension UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+@IBDesignable extension UIKit.UITextView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+@IBDesignable extension UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+@IBDesignable extension UIKit.UINavigationItem {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+@IBDesignable extension UIKit.UITabBarItem {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+extension UIKit.UIBarButtonItem {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+@IBDesignable extension UIKit.UITextField {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+@IBDesignable extension UIKit.UISearchBar {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SCCMainViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) open var videoViewController: UIKit.UIViewController!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public enum SCCViewMode {
+  case inner, tab
+  public static func == (a: SpringchatCore.SCCViewMode, b: SpringchatCore.SCCViewMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct SCCConsumerConfigure {
+  public var id: Swift.String
+  public var key: Swift.String
+  public init(id: Swift.String = "", key: Swift.String = "")
+}
+public struct SCCPurchasesConfigure {
+  public var publicAPIKey: Swift.String
+  public var appUserID: Swift.String?
+  public init(publicAPIKey: Swift.String = "", appUserID: Swift.String? = nil)
+}
+public struct SCCConfigure {
+  public var prod: Swift.Bool
+  public var viewMode: SpringchatCore.SCCViewMode
+  public var consumerConfigure: SpringchatCore.SCCConsumerConfigure?
+  public var purchasesConfigure: SpringchatCore.SCCPurchasesConfigure?
+}
+@_hasMissingDesignatedInitializers final public class SCCManager {
+  public static let shared: SpringchatCore.SCCManager
+  final public var isInnerMode: Swift.Bool {
+    get
+  }
+  final public func initialize(prod: Swift.Bool = true, viewMode: SpringchatCore.SCCViewMode = .inner, consumerConfigure: SpringchatCore.SCCConsumerConfigure? = nil, purchasesConfigure: SpringchatCore.SCCPurchasesConfigure? = nil)
+  @objc deinit
+}
+extension SpringchatCore.SCCViewMode : Swift.Equatable {}
+extension SpringchatCore.SCCViewMode : Swift.Hashable {}
