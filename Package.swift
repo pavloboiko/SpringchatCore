@@ -22,10 +22,6 @@ let package = Package(
             exact: "3.7.5"
         ),
         .package(
-            url: "https://github.com/Alamofire/Alamofire.git",
-            .upToNextMajor(from: "5.9.1")
-        ),
-        .package(
             url: "https://github.com/mixpanel/mixpanel-swift",
             branch: "master"
         ),
@@ -97,10 +93,6 @@ let package = Package(
             url: "https://github.com/socketio/socket.io-client-swift",
             branch: "master"
         ),
-        .package(
-            url: "https://github.com/RevenueCat/purchases-ios",
-            .upToNextMajor(from: "5.12.0")
-        ),
     ],
     targets: [
         .binaryTarget(
@@ -121,10 +113,6 @@ let package = Package(
                 .product(
                     name: "PhoneNumberKit",
                     package: "PhoneNumberKit"
-                ),
-                .product(
-                    name: "Alamofire",
-                    package: "Alamofire"
                 ),
                 .product(
                     name: "DGCharts",
@@ -201,10 +189,6 @@ let package = Package(
                 .product(
                     name: "SocketIO",
                     package: "socket.io-client-swift"
-                ),
-                .product(
-                    name: "RevenueCat",
-                    package: "purchases-ios"
                 ),
                 .target(name: "SpringchatCoreFramework"),
                 .target(name: "Thirdparty"),

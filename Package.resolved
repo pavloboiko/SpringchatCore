@@ -1,15 +1,6 @@
 {
-  "originHash" : "1e37cf84bbb280c201096e8ee00b0164ba1e0c03e8d2aef1f11209f164216b80",
+  "originHash" : "e3b3cfd2fdfb9646c83daf08a967a5ec7ec67e7e3435e683770d8afd9748b16b",
   "pins" : [
-    {
-      "identity" : "alamofire",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Alamofire/Alamofire.git",
-      "state" : {
-        "revision" : "513364f870f6bfc468f9d2ff0a95caccc10044c5",
-        "version" : "5.10.2"
-      }
-    },
     {
       "identity" : "charts",
       "kind" : "remoteSourceControl",
@@ -89,15 +80,6 @@
       "state" : {
         "revision" : "7de01494163478adb1aa83740914a4ca29059169",
         "version" : "2.0.4"
-      }
-    },
-    {
-      "identity" : "purchases-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/RevenueCat/purchases-ios",
-      "state" : {
-        "revision" : "d723de873b8bd8146fe1bed0cd809ab73d1a3105",
-        "version" : "5.14.6"
       }
     },
     {

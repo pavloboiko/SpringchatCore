@@ -86,7 +86,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		Pv7QoB2Ayfk0RnwwlUE3YlfXkR0=
+		uOupaHJt4X3OXKk9gG1lONHxN14=
 		</data>
 		<key>AvatarItemCell.nib</key>
 		<data>
@@ -126,7 +126,7 @@
 		</data>
 		<key>Frameworks/AlamofireDynamic.framework/AlamofireDynamic</key>
 		<data>
-		gAJgcD6wP4g4DYbGQdOGFB5TAoA=
+		ji3Qsb9b0tqVwPBznbKI5eKK2Aw=
 		</data>
 		<key>Frameworks/AlamofireDynamic.framework/Info.plist</key>
 		<data>
@@ -138,7 +138,7 @@
 		</data>
 		<key>Frameworks/DGChartsDynamic.framework/DGChartsDynamic</key>
 		<data>
-		T3MWbAC4pi1qTxvO5HuAIlzR8iY=
+		GJ6qIghRrOSiWjb0AuwVvefIowY=
 		</data>
 		<key>Frameworks/DGChartsDynamic.framework/Info.plist</key>
 		<data>
@@ -154,7 +154,7 @@
 		</data>
 		<key>Frameworks/PhoneNumberKit-Dynamic.framework/PhoneNumberKit-Dynamic</key>
 		<data>
-		NIUw7PCDnJGF+svlZA2WdG5d/T4=
+		NcJj1Vd5NHqQT7P/h3gqTlWP7Gg=
 		</data>
 		<key>Frameworks/PhoneNumberKit-Dynamic.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -166,7 +166,7 @@
 		</data>
 		<key>Frameworks/RealmSwift.framework/RealmSwift</key>
 		<data>
-		TDGerx1jbTU5LiogPvMyN3PDD2Q=
+		ajFdHcMOHv8UosjoCYjSePGDKMg=
 		</data>
 		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -178,7 +178,7 @@
 		</data>
 		<key>Frameworks/SnapKit-Dynamic.framework/SnapKit-Dynamic</key>
 		<data>
-		0zjRStO0dJrlzod7JD9iZnKV1ts=
+		59KmQmSkgNqztxVfknx5qCLNbj0=
 		</data>
 		<key>Frameworks/SnapKit-Dynamic.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -190,7 +190,7 @@
 		</data>
 		<key>Frameworks/SwiftyGif-Dynamic.framework/SwiftyGif-Dynamic</key>
 		<data>
-		RCKohZ3p1dMCxgfNJwQJbFRvbeU=
+		PTdnOYAWPP8kA3h/hEP1QJu8TGk=
 		</data>
 		<key>Frameworks/SwiftyGif-Dynamic.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -306,27 +306,27 @@
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		PebdSwYxiHD+qBZxfpjcaDsyxyc=
+		UKF7ddSuWrKuI4o9lFicZyJhjY4=
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		jcCE4gUw1iqYyoitvElu07F5/dY=
+		RR9OctntpMkfQ+gxdgmQKUCt4Ac=
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		ptJCZ4fHIo+oFsVnCJ2AttgjFUw=
+		+DcCZBaRntIuzcN0RWUpllMYSQY=
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		Pze4rbYJlfbfXONqmGL2e8qqWnw=
+		MBB4rcPa+OvGInPAzh0QEzrEzKk=
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		ptJCZ4fHIo+oFsVnCJ2AttgjFUw=
+		+DcCZBaRntIuzcN0RWUpllMYSQY=
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		wHsax3t0puKS42rL6Kg3ugU3120=
+		iZS7VXZW2uhYIgZlPovGM4bzkfk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -773,7 +773,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jW7IyL5P7Ou57aiSUZShsf9J/asiu0mZn4WK62OCdzo=
+			xjBB1bphZ+8DRKrsyZYezUjZ3UTAgRUPt3PKC9tcLlg=
 			</data>
 		</dict>
 		<key>AvatarItemCell.nib</key>
@@ -836,7 +836,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			s5fzKqq9jh0cRAVcewPfEO+J4hBuvQVBheec6Emni8M=
+			EiSkBiIvrpqyTs0Pb0LJDie9VGc6K7vhqT97cOTQDHM=
 			</data>
 		</dict>
 		<key>Frameworks/AlamofireDynamic.framework/Info.plist</key>
@@ -857,7 +857,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3+EQusAye45hmfJUulaOlOuOuiNb0NYJBWH0mBah2Z4=
+			zPmUN82MbMTTxu1P+8+fIN0gr9nDh4ENXTRhw767uvQ=
 			</data>
 		</dict>
 		<key>Frameworks/DGChartsDynamic.framework/Info.plist</key>
@@ -885,7 +885,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JQTerKudX2+68ttPZUARWD3VuESyqmX2unGGgmmTByY=
+			uYhpsxmiyNciJlSvZamqExUelFS+QJpp+MlNHuSg/Vg=
 			</data>
 		</dict>
 		<key>Frameworks/PhoneNumberKit-Dynamic.framework/_CodeSignature/CodeResources</key>
@@ -906,7 +906,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4IQ16+WhHhw77WQxJq6VcbCmU2a+ehi+84oKfcfeHo8=
+			Wa+980wNBuPswlLt4btmdXDRwXbmZVhPwo5To8aftA0=
 			</data>
 		</dict>
 		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
@@ -927,7 +927,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wVRGz5dfmH71WXPMAGk3HT+I+MPxE7KqAkwE6h2dBNo=
+			VGJZ7X2JtrJEEZ7F2hxTMg7lIf8a/+Skl2Tq7yl5ZKg=
 			</data>
 		</dict>
 		<key>Frameworks/SnapKit-Dynamic.framework/_CodeSignature/CodeResources</key>
@@ -948,7 +948,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AxpwiadxFqE15MrYQMQHiHOk3c9bMupAmrM4/0ka2uM=
+			ZgO4pmXYePWckgl8Knbb0ZOdSOcxoaj0J9q4TLjLL/Y=
 			</data>
 		</dict>
 		<key>Frameworks/SwiftyGif-Dynamic.framework/_CodeSignature/CodeResources</key>
@@ -1144,42 +1144,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VYfQevgXJZNFZg/ypIosLtjA5Dr/vzjdCqCoWPRdoVI=
+			VSuP7wA4xxEoMaoHk/Z6nYTcesRGzH1nPYw8H2eK8Tw=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+xXuhuI1SSJA+Xt0bnCRjC+ysReNWl2QEtCTUOhb/AA=
+			nMOj1FTdmgcRDZcyFYQOXpudMt81auUjlSH55AjtRSU=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3I3TULUoSPtUbWh7gksWYN+c47exmWOeJoRNSw/u0fA=
+			EoSo8TaP6PtSmE9hdklDXgMNdNjM1i9wGhHQVFMbRNI=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nL4CG8Sc7wWhwhWafx/a6krH395Q+kcAP2d9Xa0ZMfI=
+			dMTJ4KWCIUBHpwVq/QK3GkT4V24O2qwKSDPREaUYu0c=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3I3TULUoSPtUbWh7gksWYN+c47exmWOeJoRNSw/u0fA=
+			EoSo8TaP6PtSmE9hdklDXgMNdNjM1i9wGhHQVFMbRNI=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VbGdaivRDphdyYaByEf5ttz7Bd7jDt/1i/L71SZwqkc=
+			6SdWV0A2WTSOMd9y6flelzZb81Ny7g+KGOkCVZL10Ng=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

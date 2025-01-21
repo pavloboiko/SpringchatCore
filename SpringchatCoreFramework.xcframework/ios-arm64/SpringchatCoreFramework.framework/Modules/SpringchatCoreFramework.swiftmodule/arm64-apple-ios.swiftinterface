@@ -18,8 +18,6 @@ import PhoneNumberKit
 import PopupDialog
 import Promise
 import QuartzCore
-import Realm
-import RealmSwift
 import RevenueCat
 import RxCocoa
 import RxDataSources
@@ -389,12 +387,6 @@ extension UIKit.UIBarButtonItem {
 }
 @IBDesignable extension UIKit.UISearchBar {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
-}
-@available(iOS 11.0, tvOS 11.0, *)
-@available(watchOS, unavailable)
-extension UIKit.UIImage {
-  #warning("The "add" image asset name resolves to a conflicting UIImage symbol "add". Try renaming the asset.")
-  #warning("The "remove" image asset name resolves to a conflicting UIImage symbol "remove". Try renaming the asset.")
 }
 extension SpringchatCoreFramework.SpringchatFont : Swift.Equatable {}
 extension SpringchatCoreFramework.SpringchatFont : Swift.Hashable {}
