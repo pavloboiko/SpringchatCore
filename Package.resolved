@@ -1,5 +1,5 @@
 {
-  "originHash" : "bae54c21cb08f5728bbc78244e80688a68e7fcb42186b1dd6d83d72a7ea761cb",
+  "originHash" : "809c38a3cea45a399ca2d4455fa4b69b7455ee49c901bc054a16e448bdfd6ab2",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -80,15 +80,6 @@
       "state" : {
         "revision" : "7de01494163478adb1aa83740914a4ca29059169",
         "version" : "2.0.4"
-      }
-    },
-    {
-      "identity" : "purchases-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/RevenueCat/purchases-ios",
-      "state" : {
-        "revision" : "d723de873b8bd8146fe1bed0cd809ab73d1a3105",
-        "version" : "5.14.6"
       }
     },
     {

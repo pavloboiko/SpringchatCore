@@ -93,10 +93,6 @@ let package = Package(
             url: "https://github.com/socketio/socket.io-client-swift",
             branch: "master"
         ),
-        .package(
-            url: "https://github.com/RevenueCat/purchases-ios",
-            .upToNextMajor(from: "5.12.0")
-        ),
     ],
     targets: [
         .binaryTarget(
@@ -185,10 +181,6 @@ let package = Package(
                 .product(
                     name: "SocketIO",
                     package: "socket.io-client-swift"
-                ),
-                .product(
-                    name: "RevenueCat",
-                    package: "purchases-ios"
                 ),
                 .target(name: "SpringchatCoreFramework"),
             ],
