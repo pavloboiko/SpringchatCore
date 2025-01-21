@@ -1036,6 +1036,18 @@
 		<data>
 		uPuFrzezubsQSIDQO1GCung0Gbs=
 		</data>
+		<key>Frameworks/Chatto.framework/Chatto</key>
+		<data>
+		NdlqVjv5kS6MFJl/1VO+C2nlfUc=
+		</data>
+		<key>Frameworks/Chatto.framework/Info.plist</key>
+		<data>
+		oFO4ykJS9rVsYEWfSheRLWU0v+s=
+		</data>
+		<key>Frameworks/Chatto.framework/_CodeSignature/CodeResources</key>
+		<data>
+		zC4mMvUdQFRqs0gsDftDXl9GlZs=
+		</data>
 		<key>Headers/RECommonFunctions.h</key>
 		<data>
 		4Q3+eKuxFvhFAtEPCkB3VXy1qHI=
@@ -1062,7 +1074,7 @@
 		</data>
 		<key>Modules/ThirdParty.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		qdFKsG9RuggO0nIMsnLHq+y6l2k=
+		kvFOLR/qkCsl7crMEhMHvjcpBLY=
 		</data>
 		<key>Modules/ThirdParty.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -2901,6 +2913,27 @@
 			qrACmrETuLjN8RBdaOg5muyrEC00zMsCwhdgRiAAU6w=
 			</data>
 		</dict>
+		<key>Frameworks/Chatto.framework/Chatto</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zI5A5zLBmoiLy4UAaUazDkQi2X5YxSCeMOSJM090vGw=
+			</data>
+		</dict>
+		<key>Frameworks/Chatto.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jEAF3MaF8tCPiW/vWLzCP0AFYUJxuty2pduzHuKGp4M=
+			</data>
+		</dict>
+		<key>Frameworks/Chatto.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			arOTygAcV4yZnbNjL8/maELZNFFOSMmG0JObuxy2A/k=
+			</data>
+		</dict>
 		<key>Headers/RECommonFunctions.h</key>
 		<dict>
 			<key>hash2</key>
@@ -2940,7 +2973,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			m99dgvpbEzCNW+/zAMO5s6KCPMu4EuRawWR1l819ON4=
+			It0SGNQPz31vBgG0c0e0PyXwZJO1LjIV/nt+6SvqOYI=
 			</data>
 		</dict>
 		<key>Modules/ThirdParty.swiftmodule/arm64-apple-ios.abi.json</key>
