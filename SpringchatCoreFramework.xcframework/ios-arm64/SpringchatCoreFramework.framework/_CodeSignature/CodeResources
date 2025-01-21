@@ -6,7 +6,7 @@
 	<dict>
 		<key>.DS_Store</key>
 		<data>
-		9O4BqUvJcBQF2Jqmql2AOwrDsyI=
+		lakSIw5Z8Pyq0GQo8AztwNeBL+o=
 		</data>
 		<key>Account.storyboardc/0uh-y1-Ar1-view-8li-jj-LUE.nib</key>
 		<data>
@@ -314,15 +314,15 @@
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		x4++ediDueCJTuxUBDZWh73oG8w=
+		o22Msdw/i6lztB3H3UhkiVfSrbM=
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		xlugq5v+e/9321gbVcYugAJC8b0=
+		a8xtE3hpjMf8NB1Wyt99DpRgDZE=
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		NB0C00IwPzXKenKRMY+3nyAMTUk=
+		7sDDN2ubKtQFrg1HigDC+ynHLfE=
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -330,11 +330,11 @@
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		NB0C00IwPzXKenKRMY+3nyAMTUk=
+		7sDDN2ubKtQFrg1HigDC+ynHLfE=
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		xyoJLhvPyFYqvx51a0Gxx1PLtGQ=
+		0X/COob4ZEQpEPSXcOBoCN9sMVk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1152,21 +1152,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uqd+qSAPtYeVh7KrlHxSyizMYnnvymX8pWqYCN8l+K0=
+			51sc33ADM6X4jCNrh4iiWlSoKP8iVlspk1nqMJWAskw=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GarQavfruQTLUBiXfIZEkkS2b1vQ6Y3N/fAMrReFgKQ=
+			VOodgAF9v6FmuPznEP0TIzPHkFqWhG7XmoYAjCU2w5g=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vAD5NhlLBPdrbebxdB6P8OR4ANXsY74/KpvUlfDp7JQ=
+			uo1cAgES5xLpR8xlFF/kKylZRgLGh8ln01Z0fhpQww8=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -1180,14 +1180,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vAD5NhlLBPdrbebxdB6P8OR4ANXsY74/KpvUlfDp7JQ=
+			uo1cAgES5xLpR8xlFF/kKylZRgLGh8ln01Z0fhpQww8=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CXmBVHNCyjX5GYlTaEHNAJeNFTtUQJnRjeBv6x9NpQQ=
+			tox0+m7HDtQi05oSi+gCpovipMJwVMVKLfwRmEubXWc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
