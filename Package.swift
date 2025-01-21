@@ -22,6 +22,10 @@ let package = Package(
             exact: "3.7.5"
         ),
         .package(
+            url: "https://github.com/Alamofire/Alamofire.git",
+            .upToNextMajor(from: "5.9.1")
+        ),
+        .package(
             url: "https://github.com/mixpanel/mixpanel-swift",
             branch: "master"
         ),
@@ -105,6 +109,10 @@ let package = Package(
                 .product(
                     name: "PhoneNumberKit",
                     package: "PhoneNumberKit"
+                ),
+                .product(
+                    name: "Alamofire",
+                    package: "Alamofire"
                 ),
                 .product(
                     name: "DGCharts",
