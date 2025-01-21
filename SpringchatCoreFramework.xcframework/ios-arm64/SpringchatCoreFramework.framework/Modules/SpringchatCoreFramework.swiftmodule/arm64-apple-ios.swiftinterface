@@ -9,7 +9,6 @@ import Chatto
 import CoreGraphics
 import DGCharts
 import DeveloperToolsSupport
-import Filament
 import Foundation
 import Lottie
 import MetalKit
