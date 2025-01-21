@@ -19,10 +19,6 @@ import PopupDialog
 import Promise
 import QuartzCore
 import RevenueCat
-import RxCocoa
-import RxDataSources
-import RxRealm
-import RxSwift
 import SceneKit
 import SnapKit
 import SocketIO
