@@ -1,5 +1,5 @@
 {
-  "originHash" : "7e9c077ab040fd7694cd996df50cbd3038774ee27463926219b534aa5e73c20b",
+  "originHash" : "bae54c21cb08f5728bbc78244e80688a68e7fcb42186b1dd6d83d72a7ea761cb",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -8,15 +8,6 @@
       "state" : {
         "revision" : "513364f870f6bfc468f9d2ff0a95caccc10044c5",
         "version" : "5.10.2"
-      }
-    },
-    {
-      "identity" : "charts",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ChartsOrg/Charts",
-      "state" : {
-        "revision" : "dd9c72e3d7e751e769971092a6bd72d39198ae63",
-        "version" : "5.1.0"
       }
     },
     {
@@ -89,6 +80,15 @@
       "state" : {
         "revision" : "7de01494163478adb1aa83740914a4ca29059169",
         "version" : "2.0.4"
+      }
+    },
+    {
+      "identity" : "purchases-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RevenueCat/purchases-ios",
+      "state" : {
+        "revision" : "d723de873b8bd8146fe1bed0cd809ab73d1a3105",
+        "version" : "5.14.6"
       }
     },
     {

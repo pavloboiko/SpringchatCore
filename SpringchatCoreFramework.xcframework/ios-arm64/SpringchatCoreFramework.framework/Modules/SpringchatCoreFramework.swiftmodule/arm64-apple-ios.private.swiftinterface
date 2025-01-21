@@ -6,7 +6,6 @@ import AVKit
 import AdSupport
 import Alamofire
 import CoreGraphics
-import DGCharts
 import DeveloperToolsSupport
 import Foundation
 import Lottie

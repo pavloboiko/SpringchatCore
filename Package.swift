@@ -50,10 +50,6 @@ let package = Package(
             exact: "1.52.0"
         ),
         .package(
-            url: "https://github.com/ChartsOrg/Charts",
-            .upToNextMajor(from: "5.1.0")
-        ),
-        .package(
             url: "https://github.com/khanlou/Promise",
             .upToNextMajor(from: "2.0.4")
         ),
@@ -117,10 +113,6 @@ let package = Package(
                 .product(
                     name: "Alamofire",
                     package: "Alamofire"
-                ),
-                .product(
-                    name: "DGCharts",
-                    package: "Charts"
                 ),
                 .product(
                     name: "Promise",
