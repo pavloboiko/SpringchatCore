@@ -306,15 +306,15 @@
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		dsDWTDVIEMwmYyMFJEuojPogJ2o=
+		CEFasSEzaI1kHY8FSaBIIlW/uCs=
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		lW95NG5hbFJbuvLY+fKsbhtzkRg=
+		Ckp9Wc1CQVgELuuY/L7YtUGrLvI=
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		4fKt1aze1dHw3MygaUuzQ52KlV0=
+		z5XSiaOSl0NQnJvJL6fGQ3jcqNc=
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -322,11 +322,11 @@
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		4fKt1aze1dHw3MygaUuzQ52KlV0=
+		z5XSiaOSl0NQnJvJL6fGQ3jcqNc=
 		</data>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		zmBVRhNtWwv3FHZz7/Eo1dNsbiw=
+		rc9WD+zb9solcLm7cukrLWy/uC4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1144,21 +1144,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UyBYF4FEPveM74HIf2U9va2SIN8J7NBuuUWR5fh8Z40=
+			kirqwV9MRpBnOmQtrIPCyZYIcvGlkxlu0+5bAn9tSac=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CI5wja9Rdq4yAhsHwciJYh6lVw56qkhuuToibRPdAj8=
+			wMLwu5BND30rzj6vi8HCnwN+vdLKuntef50qw0ZZd34=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cnEjBaIVgUjZsQpRiJo5S23JaOHD6e8wJ+TsZGJEeUI=
+			jpQB0HMTH41hUBfdJitWDNenmhnTWtagDpR3HVnibno=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -1172,14 +1172,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cnEjBaIVgUjZsQpRiJo5S23JaOHD6e8wJ+TsZGJEeUI=
+			jpQB0HMTH41hUBfdJitWDNenmhnTWtagDpR3HVnibno=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCoreFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			d2wj77I7mH91GrPzg/M6qrWWuD94sWQUb3m37ncM3Kg=
+			MMifzH+oZSJwnRoGfSZR2TLcs1TGtAMcpWMwTph5YEo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
