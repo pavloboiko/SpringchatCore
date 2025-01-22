@@ -124,6 +124,18 @@
 		<data>
 		WtJh9cAKAiN15a46MpaSQ+A+Y/s=
 		</data>
+		<key>Frameworks/RealmSwift.framework/Info.plist</key>
+		<data>
+		67F91psxvvhOG5UOCjAMCARiyJo=
+		</data>
+		<key>Frameworks/RealmSwift.framework/RealmSwift</key>
+		<data>
+		CYAmtZdtxZKvH7M71iY5L6FA0xQ=
+		</data>
+		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
+		<data>
+		rojrVZ8E73y27Z7toc2dqwogN+A=
+		</data>
 		<key>Game.storyboardc/Info.plist</key>
 		<data>
 		67ENopg+FK8RkAjTl7CdZ7MDDmk=
@@ -758,6 +770,27 @@
 			<key>hash2</key>
 			<data>
 			d6ZozXztR9/0TSwek/5D/kg9EpRK+/2wRtUwt+FqFMw=
+			</data>
+		</dict>
+		<key>Frameworks/RealmSwift.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KI+BMl4jtdZlRD27NftW621R09QbFJW0IUPT2EVxoHg=
+			</data>
+		</dict>
+		<key>Frameworks/RealmSwift.framework/RealmSwift</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			R7sk6x6mCCkljXrPabjo75rcwXNzC6c7n/i+EHPI1Uc=
+			</data>
+		</dict>
+		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eG5RBRr9dWVyrFA9CSqjANSzclggxnIF890/XtU+ZYc=
 			</data>
 		</dict>
 		<key>Game.storyboardc/Info.plist</key>
