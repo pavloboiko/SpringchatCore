@@ -61,8 +61,10 @@ public enum SCCViewMode {
 }
 public struct SCCConsumerConfigure {
   public var id: Swift.String
-  public var key: Swift.String
-  public init(id: Swift.String = "", key: Swift.String = "")
+  public var secret: Swift.String
+  public var referenceId: Swift.String?
+  public var refPlatformId: Swift.String?
+  public init(id: Swift.String = "", secret: Swift.String = "", referenceId: Swift.String? = nil, refPlatformId: Swift.String? = nil)
 }
 public struct SCCPurchasesConfigure {
   public var publicAPIKey: Swift.String
