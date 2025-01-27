@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		qXHs8SDtwNSBUwp/2TCFTz2IA6k=
+		</data>
 		<key>Account.storyboardc/0uh-y1-Ar1-view-8li-jj-LUE.nib</key>
 		<data>
 		M6wT58svNOfGhF7MoUTkbpD69ng=
@@ -124,17 +128,9 @@
 		<data>
 		WtJh9cAKAiN15a46MpaSQ+A+Y/s=
 		</data>
-		<key>Frameworks/PhoneNumberKit-Dynamic.framework/Info.plist</key>
+		<key>Frameworks/.DS_Store</key>
 		<data>
-		OzVPs0KXMJ8fDfzP+sP56m0fXDg=
-		</data>
-		<key>Frameworks/PhoneNumberKit-Dynamic.framework/PhoneNumberKit-Dynamic</key>
-		<data>
-		qr5tRbceolBIJAQI1MHIzpnm7+I=
-		</data>
-		<key>Frameworks/PhoneNumberKit-Dynamic.framework/_CodeSignature/CodeResources</key>
-		<data>
-		76lRKi5zUFZ1uFBhJ5Nc8pRs10k=
+		+RH/MGNH+40/GOXdoqbhHXSoApU=
 		</data>
 		<key>Frameworks/RealmSwift.framework/Info.plist</key>
 		<data>
@@ -142,7 +138,7 @@
 		</data>
 		<key>Frameworks/RealmSwift.framework/RealmSwift</key>
 		<data>
-		FykzcL9OiQAAxlG+8/2o212q4PI=
+		iC9/swqaruRaILvZ+cez0jPyEQ0=
 		</data>
 		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -255,6 +251,14 @@
 		<key>MembersTypingDecorator.nib</key>
 		<data>
 		UwgMotodVq9mi4Swx9FF14ag6Nk=
+		</data>
+		<key>Modules/.DS_Store</key>
+		<data>
+		S0VneNfgo6gxcSwlzqKC8TitGdw=
+		</data>
+		<key>Modules/SpringchatCore.swiftmodule/.DS_Store</key>
+		<data>
+		AAhy1csUbjRAnNLP/6XQAVVNv7w=
 		</data>
 		<key>Modules/SpringchatCore.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
@@ -784,27 +788,6 @@
 			d6ZozXztR9/0TSwek/5D/kg9EpRK+/2wRtUwt+FqFMw=
 			</data>
 		</dict>
-		<key>Frameworks/PhoneNumberKit-Dynamic.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			tX1TAxyGfYcjvXLLfZpaVx5xYpos4PErYFVARwOoOx0=
-			</data>
-		</dict>
-		<key>Frameworks/PhoneNumberKit-Dynamic.framework/PhoneNumberKit-Dynamic</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			mNK/tRciuTjE3fsaju0+FnzU1+yWiQ20vAlc36W8vWc=
-			</data>
-		</dict>
-		<key>Frameworks/PhoneNumberKit-Dynamic.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			aziYTu2vC7bT80n2wuqHPBzzrRTt/SXGBaodsD2qJ5M=
-			</data>
-		</dict>
 		<key>Frameworks/RealmSwift.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
@@ -816,7 +799,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fe8p/ZbZCfuheAr6p+In+2u+8QRv/zNMJpL9ZTFXTnM=
+			zf+7KG8YEk0miRGTcCunYIXbE9Jpz3iTZM0+UqUSj60=
 			</data>
 		</dict>
 		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
