@@ -124,13 +124,25 @@
 		<data>
 		WtJh9cAKAiN15a46MpaSQ+A+Y/s=
 		</data>
+		<key>Frameworks/PhoneNumberKit-Dynamic.framework/Info.plist</key>
+		<data>
+		OzVPs0KXMJ8fDfzP+sP56m0fXDg=
+		</data>
+		<key>Frameworks/PhoneNumberKit-Dynamic.framework/PhoneNumberKit-Dynamic</key>
+		<data>
+		qr5tRbceolBIJAQI1MHIzpnm7+I=
+		</data>
+		<key>Frameworks/PhoneNumberKit-Dynamic.framework/_CodeSignature/CodeResources</key>
+		<data>
+		76lRKi5zUFZ1uFBhJ5Nc8pRs10k=
+		</data>
 		<key>Frameworks/RealmSwift.framework/Info.plist</key>
 		<data>
 		67F91psxvvhOG5UOCjAMCARiyJo=
 		</data>
 		<key>Frameworks/RealmSwift.framework/RealmSwift</key>
 		<data>
-		+UiiUrYohq0OR/FoVClKXTMN53s=
+		FykzcL9OiQAAxlG+8/2o212q4PI=
 		</data>
 		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -246,7 +258,7 @@
 		</data>
 		<key>Modules/SpringchatCore.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		1jTwP4bvCZErwmoJwd7rk9RiyhU=
+		EBhiKJqjwXa2vIcxfT+zJuPqlKQ=
 		</data>
 		<key>Modules/SpringchatCore.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -772,6 +784,27 @@
 			d6ZozXztR9/0TSwek/5D/kg9EpRK+/2wRtUwt+FqFMw=
 			</data>
 		</dict>
+		<key>Frameworks/PhoneNumberKit-Dynamic.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tX1TAxyGfYcjvXLLfZpaVx5xYpos4PErYFVARwOoOx0=
+			</data>
+		</dict>
+		<key>Frameworks/PhoneNumberKit-Dynamic.framework/PhoneNumberKit-Dynamic</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mNK/tRciuTjE3fsaju0+FnzU1+yWiQ20vAlc36W8vWc=
+			</data>
+		</dict>
+		<key>Frameworks/PhoneNumberKit-Dynamic.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			aziYTu2vC7bT80n2wuqHPBzzrRTt/SXGBaodsD2qJ5M=
+			</data>
+		</dict>
 		<key>Frameworks/RealmSwift.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
@@ -783,7 +816,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			42PE9GfTQ4US0HYCaeKcvhK5paJPrxIpqxpNs6QUQ9o=
+			fe8p/ZbZCfuheAr6p+In+2u+8QRv/zNMJpL9ZTFXTnM=
 			</data>
 		</dict>
 		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
@@ -979,7 +1012,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Cqqpl5+y0uROhiASGBBCdWT35AIskW39UuboZJWjYjw=
+			bNcyKGB6LUezlCV8ub0gSuwaW4VtwMHyZCUhwLGhniE=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCore.swiftmodule/arm64-apple-ios.abi.json</key>
