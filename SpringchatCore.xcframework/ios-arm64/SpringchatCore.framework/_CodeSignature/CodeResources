@@ -86,7 +86,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		jazdMxY0ooRevwJe6+aJphljmWM=
+		OFsWJeuxwTIPeldbz1btwJekMKk=
 		</data>
 		<key>AvatarItemCell.nib</key>
 		<data>
@@ -124,13 +124,25 @@
 		<data>
 		WtJh9cAKAiN15a46MpaSQ+A+Y/s=
 		</data>
+		<key>Frameworks/PhoneNumberKit-Dynamic.framework/Info.plist</key>
+		<data>
+		OzVPs0KXMJ8fDfzP+sP56m0fXDg=
+		</data>
+		<key>Frameworks/PhoneNumberKit-Dynamic.framework/PhoneNumberKit-Dynamic</key>
+		<data>
+		JAY+jAHZ4cCSyAyNe++jsuhH/w4=
+		</data>
+		<key>Frameworks/PhoneNumberKit-Dynamic.framework/_CodeSignature/CodeResources</key>
+		<data>
+		76lRKi5zUFZ1uFBhJ5Nc8pRs10k=
+		</data>
 		<key>Frameworks/RealmSwift.framework/Info.plist</key>
 		<data>
 		67F91psxvvhOG5UOCjAMCARiyJo=
 		</data>
 		<key>Frameworks/RealmSwift.framework/RealmSwift</key>
 		<data>
-		CYAmtZdtxZKvH7M71iY5L6FA0xQ=
+		+r6TTbO9e7pIjdWwH0pUSgJdDJk=
 		</data>
 		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -202,7 +214,7 @@
 		</data>
 		<key>Home.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		zQwf8YDXR6HpScM9yTnA3DWn4J8=
+		xYKRvBT8eDRs9IEnIvPWMseHrCk=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -246,15 +258,15 @@
 		</data>
 		<key>Modules/SpringchatCore.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		hgV2JFlDfO3BSF4W4JI8NqdILfs=
+		EBhiKJqjwXa2vIcxfT+zJuPqlKQ=
 		</data>
 		<key>Modules/SpringchatCore.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		lZtemZJ9rWG5zFaFe/JxT1LR+xs=
+		eZqhb6D58jClVC7GoLvqpSLxWZw=
 		</data>
 		<key>Modules/SpringchatCore.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		PQKlEmJiWIe+QGcro7SwD4yE01Y=
+		hHuJCQVTrjkc8K1HGnq8VZeedlU=
 		</data>
 		<key>Modules/SpringchatCore.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -262,11 +274,11 @@
 		</data>
 		<key>Modules/SpringchatCore.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		PQKlEmJiWIe+QGcro7SwD4yE01Y=
+		hHuJCQVTrjkc8K1HGnq8VZeedlU=
 		</data>
 		<key>Modules/SpringchatCore.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		peIjsyTUcbxQ56JycfM0oUUXHbo=
+		KQAD8q0lqkTqHSKCn8Bc0jKCJUU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -410,7 +422,7 @@
 		</data>
 		<key>SCLiveCardView.nib</key>
 		<data>
-		kW0Y0lK3YHXpd/dfxZXinE71rv8=
+		HTseCZMtSTj6l53JPTsRgYOWG2Y=
 		</data>
 		<key>SCLiveStatsCell.nib</key>
 		<data>
@@ -713,7 +725,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tQK6yOG+41aAK4i+TcecLuX1mo95EcDIocIdpUt6KyQ=
+			YkQ8Pg+JYdokRBedwR6s1gYBGiUp533rwEUYbUEVT/Q=
 			</data>
 		</dict>
 		<key>AvatarItemCell.nib</key>
@@ -772,6 +784,27 @@
 			d6ZozXztR9/0TSwek/5D/kg9EpRK+/2wRtUwt+FqFMw=
 			</data>
 		</dict>
+		<key>Frameworks/PhoneNumberKit-Dynamic.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tX1TAxyGfYcjvXLLfZpaVx5xYpos4PErYFVARwOoOx0=
+			</data>
+		</dict>
+		<key>Frameworks/PhoneNumberKit-Dynamic.framework/PhoneNumberKit-Dynamic</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6yiMrMw3VtjcFBIYhJSki/ARQ0buoG/cxxwykO60W3E=
+			</data>
+		</dict>
+		<key>Frameworks/PhoneNumberKit-Dynamic.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			aziYTu2vC7bT80n2wuqHPBzzrRTt/SXGBaodsD2qJ5M=
+			</data>
+		</dict>
 		<key>Frameworks/RealmSwift.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
@@ -783,7 +816,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			R7sk6x6mCCkljXrPabjo75rcwXNzC6c7n/i+EHPI1Uc=
+			iW55w9nwNtqffHQktxaN3EsFZKGmkyN5/p1/ZziaOps=
 			</data>
 		</dict>
 		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
@@ -909,7 +942,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			u4+9Z3A9umdgRuguBsGjZUvg5xfsP9kVHsli71wRzRc=
+			pD01oYxdEQRH8bnVtV9f/4IhOoMSo7UA62CuBSfnwPg=
 			</data>
 		</dict>
 		<key>LiveEventChat.storyboardc/Info.plist</key>
@@ -979,21 +1012,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			I4Z+S1VFoudv+Zv3fSek+M/QnjzShOx8HK1eiYxdaGk=
+			bNcyKGB6LUezlCV8ub0gSuwaW4VtwMHyZCUhwLGhniE=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCore.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HcWmWhuy6FuJMhPiLbjTRxsuCKvAo8+DjcRuqh9abgY=
+			ayAnqOBLuVXXbuorjWVzIYgTS7FLtXU8YNi9ZltT08M=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCore.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xhHx69mlz3A+03mcBfsHOcaetjwOP92Cl/bqETp6jAs=
+			i+Gm/BckMiJ52/KQV3lWuS08DDaZT+V5HSR6coXKmtA=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCore.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -1007,14 +1040,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xhHx69mlz3A+03mcBfsHOcaetjwOP92Cl/bqETp6jAs=
+			i+Gm/BckMiJ52/KQV3lWuS08DDaZT+V5HSR6coXKmtA=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCore.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jv3DcqhR1EnftvM1Uge0hFXxzfq8HLWaP56naGixKv0=
+			ch4B0okjpWVtx5wBTx2PLxkHUaKS4M2J/p/Rtl8xDrk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1266,7 +1299,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5B/TmtsaAZgEvmvxAo8RJe/nKuNIpzrz+oGgJKbBrbY=
+			T62OeCTwoJxmxhrjEQIGosTjDMs2llZSTJwAvfBVOdk=
 			</data>
 		</dict>
 		<key>SCLiveStatsCell.nib</key>
