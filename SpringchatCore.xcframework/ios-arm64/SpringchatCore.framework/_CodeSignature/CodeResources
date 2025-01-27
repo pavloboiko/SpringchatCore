@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		1+KrxtmhI700B0+d10+v76J0Tsg=
-		</data>
 		<key>Account.storyboardc/0uh-y1-Ar1-view-8li-jj-LUE.nib</key>
 		<data>
 		M6wT58svNOfGhF7MoUTkbpD69ng=
@@ -90,7 +86,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		jazdMxY0ooRevwJe6+aJphljmWM=
+		OFsWJeuxwTIPeldbz1btwJekMKk=
 		</data>
 		<key>AvatarItemCell.nib</key>
 		<data>
@@ -134,7 +130,7 @@
 		</data>
 		<key>Frameworks/RealmSwift.framework/RealmSwift</key>
 		<data>
-		cd4SwOd5Y7yQ9IvjAMdDBqL2rz4=
+		+UiiUrYohq0OR/FoVClKXTMN53s=
 		</data>
 		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -250,7 +246,7 @@
 		</data>
 		<key>Modules/SpringchatCore.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		xxmn5rdNmwcj2O/v29jV1CTK1wY=
+		1jTwP4bvCZErwmoJwd7rk9RiyhU=
 		</data>
 		<key>Modules/SpringchatCore.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -717,7 +713,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tQK6yOG+41aAK4i+TcecLuX1mo95EcDIocIdpUt6KyQ=
+			YkQ8Pg+JYdokRBedwR6s1gYBGiUp533rwEUYbUEVT/Q=
 			</data>
 		</dict>
 		<key>AvatarItemCell.nib</key>
@@ -787,7 +783,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lJYzknGS/Sra8lMBc3yvXExZO/fhCueUecVNXZDzhKQ=
+			42PE9GfTQ4US0HYCaeKcvhK5paJPrxIpqxpNs6QUQ9o=
 			</data>
 		</dict>
 		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
@@ -983,7 +979,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			raSKT2ItIvpSaHiKVPGvgv/RHulkCjnziPxRsydF7Xs=
+			Cqqpl5+y0uROhiASGBBCdWT35AIskW39UuboZJWjYjw=
 			</data>
 		</dict>
 		<key>Modules/SpringchatCore.swiftmodule/arm64-apple-ios.abi.json</key>
