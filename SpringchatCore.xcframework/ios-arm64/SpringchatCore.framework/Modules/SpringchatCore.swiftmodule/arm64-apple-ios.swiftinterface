@@ -64,7 +64,8 @@ public struct SCCConsumerConfigure {
   public var secret: Swift.String
   public var referenceId: Swift.String?
   public var refPlatformId: Swift.String?
-  public init(id: Swift.String = "", secret: Swift.String = "", referenceId: Swift.String? = nil, refPlatformId: Swift.String? = nil)
+  public var deviceToken: Swift.String?
+  public init(id: Swift.String = "", secret: Swift.String = "", referenceId: Swift.String? = nil, refPlatformId: Swift.String? = nil, deviceToken: Swift.String? = nil)
 }
 public struct SCCPurchasesConfigure {
   public var publicAPIKey: Swift.String
@@ -83,6 +84,8 @@ public struct SCCConfigure {
     get
   }
   final public func initialize(prod: Swift.Bool = true, viewMode: SpringchatCore.SCCViewMode = .inner, consumerConfigure: SpringchatCore.SCCConsumerConfigure? = nil, purchasesConfigure: SpringchatCore.SCCPurchasesConfigure? = nil)
+  final public func registerDeviceToken(token: Swift.String)
+  final public func registerReferenceId(id: Swift.String)
   @objc deinit
 }
 extension SpringchatCore.SCCViewMode : Swift.Equatable {}
